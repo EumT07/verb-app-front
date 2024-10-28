@@ -1,0 +1,115 @@
+<app-header/>
+<section class="home">
+    <section class="home_header">
+        <div>
+            <h1>Feel free to browse through our +200 <a [routerLink]="['/verbs']">verbs</a>!</h1>
+            <p>Stop mispronouncing verbs, practicing and improving verbs to increase your English level.</p>
+            <a class="join_us" [routerLink]="['/auth/signup']">Join <span>Us</span></a>
+        </div>
+    </section>
+    <section class="home_about">
+        <div class="about_info" >
+            <h1>Hi there..!!</h1>
+            <p>In verbsApp you will find almost all common verbs used by English speakers, these verbs will help you to improve your knowledge, improve your pronunciation by the hand of their International Phonetic Alphabet sounds. Learning with the International Phonetic Alphabet (IPA) will help you sound like American, British or native English speakers, we also include phrasal verbs, which are important verbs because they are used daliy by English speakers.</p>
+            <p>So verbsApp has worked very hard to have the most important verbs, with multiple examples made by our users, and yes, you will find different ways to use them, different expressions, how to ask with them, and how to connect them.</p>
+
+        </div>
+        <div class="about_verbs">
+            @defer{
+                <div class="verbs_container">
+                    @for (verb of verbsList; track $index) {
+                        <div>
+                            <h3>{{verb.verb}}</h3>
+                            <p class="ipa"> {{verb.ipa_us}}</p>
+                            <hr>
+                            <p> <b>Def:</b> {{verb.def}}</p>
+                            <p><b>Example:</b> {{verb.exp}}</p>
+                            <div class="ipa_sound_container">
+                                <div class="ico_container">
+                                    <div>
+                                        <i class="fa uk_ipa"></i>
+                                    </div>
+                                        <p>UK</p>
+                                </div>
+                                <div class="ico_container">
+                                    <div>
+                                        <i class="fa uk_ipa"></i>
+                                    </div>
+                                    <p>US</p>
+                                </div>
+                            </div>
+                        </div>   
+                    }
+                </div>
+            } @placeholder (minimum 3s){
+                <div class="loading_verbs">
+                    <div>
+                        <h3 class="loading_info"></h3>
+                        <p class="loading_info"> </p>
+                        <hr>
+                        <p class="loading_info"></p>
+                        <p class="loading_info"></p>
+                        <div class="ipa_sound_container">
+                            <div class="ico_container">
+                                <div>
+                                    <i class="fa uk_ipa"></i>
+                                </div>
+                                <p class="loading_info"></p>
+                            </div>
+                            <div class="ico_container">
+                                <div>
+                                    <i class="fa uk_ipa"></i>
+                                </div>
+                                <p class="loading_info"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="loading_info"></h3>
+                        <p class="loading_info"> </p>
+                        <hr>
+                        <p class="loading_info"></p>
+                        <p class="loading_info"></p>
+                        <div class="ipa_sound_container">
+                            <div class="ico_container">
+                                <div>
+                                    <i class="fa uk_ipa"></i>
+                                </div>
+                                <p class="loading_info"></p>
+                            </div>
+                            <div class="ico_container">
+                                <div>
+                                    <i class="fa uk_ipa"></i>
+                                </div>
+                                <p class="loading_info"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="loading_info"></h3>
+                        <p class="loading_info"> </p>
+                        <hr>
+                        <p class="loading_info"></p>
+                        <p class="loading_info"></p>
+                        <div class="ipa_sound_container">
+                            <div class="ico_container">
+                                <div>
+                                    <i class="fa uk_ipa"></i>
+                                </div>
+                                <p class="loading_info"></p>
+                            </div>
+                            <div class="ico_container">
+                                <div>
+                                    <i class="fa uk_ipa"></i>
+                                </div>
+                                <p class="loading_info"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+    <app-faqs/>
+</section>
+<app-footer/>

@@ -1,0 +1,34 @@
+<header>
+    <div class="nav_container">
+        <div class="left_navbar">
+            <div class="logo_container">
+                <a [routerLink]="['/']">
+                    <img class="verbsapplogo" src="/images/boticon.ico" alt="verbs app">
+                </a>
+            </div>
+            <nav class="left_navigation">
+                <ul>
+                    @for ( route of links; track route.name) {
+                        <li>
+                            <a [routerLink]="route.route">{{route.name}}</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+        <div class="righ_navbar">
+            <div class="right_navigation">
+                <div class="register_container">
+                    <a class="signin" [routerLink]="['/auth/signin']" routerLinkActive="router-link-active" >Sign In</a>
+                    <a class="signup" [routerLink]="['/auth/signup']">Sign Up</a>
+                </div>
+            </div>
+            <div class="options_navigation">
+                <div class="img_users">
+                    <img src="/images/boticon.ico" alt="user image">
+                </div>
+                <i class="fa set"></i>
+            </div>
+        </div>
+    </div>
+</header>

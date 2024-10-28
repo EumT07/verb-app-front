@@ -1,0 +1,86 @@
+<footer>
+    <div class="footer_content">
+        <div class="right_footer_side">
+            <div class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <div>
+                            <i class="fa location"></i>
+                        </div>
+                        <p><span>Address:</span> Anzoátegui - Venezuela</p>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fa paper_plane"></i>
+                        </div>
+                        <p  id="clipboard"><span>Email:</span> {{email}}<i class="far fa-copy"></i></p>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fa phone"></i>
+                        </div>
+                        <p><span>Phone:</span> +58 4248182793</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <ul>
+                    @for ( route of links; track route.name) {
+                        <li>
+                            <a [routerLink]="route.route">{{route.name}}</a>
+                        </li>
+                    }
+                </ul>
+    
+            </div>
+            <div class="policy">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a [routerLink]="['/privacy-policy']" id="privacy">Privacy Policy</a></li>
+                    <li><a [routerLink]="['/terms-and-conditions']" id="terms">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="languages">
+                <h3>Languages</h3>
+                <div class="flag_container">
+                    <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                </div>
+            </div>
+            <div class="follow_us">
+                <h3>Follow us</h3>
+                <div class="social_media">
+                        <div>
+                            <a href="">
+                                <img src="/images/social/instagram.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="/images/social/telegram.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="/images/social/whatsapp.png" alt="">
+                            </a>
+                        </div>
+                </div>
+                <div class="links_follow">
+                    <a class="join_us" [routerLink]="['/auth/signup']">
+                        Join <span>us</span>
+                    </a>
+                    <a [routerLink]="['/']" class="buymecoffee">
+                        <div class="coffeeLogo_container">
+                            <img src="/images/coffee.png" alt="">
+                        </div>
+                        <p>Buy me a Coffee</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h4>VerbsApp all rights reserved © 2024</h4>
+</footer>

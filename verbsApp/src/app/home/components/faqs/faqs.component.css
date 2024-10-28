@@ -1,0 +1,93 @@
+.FAQ {
+    max-width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.FAQ .questions{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.FAQ .title {
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.FAQ .title > h2 {
+    /* font-family: "Lilita One", cursive ; */
+    /* color: #d32324; */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.FAQ .questions > article {
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    background-color: #fcfcfc;
+    box-shadow: 1px 1px 6px #b9b6b6;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    width: 40vw;
+}
+.FAQ .questions article .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FAQ .questions article .question h4{
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+.FAQ .questions article button{
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    border-color: transparent;
+}
+.FAQ .questions article button i:nth-child(1)::before {
+    content: "\f107";
+    color: #000000;
+}
+.FAQ .questions article button i:nth-child(2)::before {
+    content: "\f106";
+    color: #000000;
+}
+.FAQ .questions article .answer{
+    padding:  1rem 0 1.5rem 0;
+    border-top: 2px solid rgba(248, 244, 244, 0.473);  
+}
+.FAQ .questions article .answer p {
+    margin-bottom: 0;
+    color: #000000;
+    font-size: 1.2rem;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    padding-right: 5px;
+}
+/*text hide*/
+.FAQ .questions article .answer {
+    display: none;
+}
+.FAQ .questions article button i:nth-child(2)::before {
+    content: "\f107";
+    display: none;
+}
+.FAQ .questions .show-text .answer {
+    display: block;
+}
+.FAQ .questions .show-text button i:nth-child(2)::before {
+    content: "\f107";
+    display: none;
+}
+.FAQ .questions .show-text button i:nth-child(1)::before {
+    content: "\f106";
+    display: block;
+}

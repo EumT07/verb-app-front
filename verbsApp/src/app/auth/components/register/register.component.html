@@ -1,0 +1,38 @@
+<section class="register_main">
+    <div class="house_ico">
+        <a [routerLink]="['/']">
+            <i class="fa house"></i>
+        </a>
+    </div>
+    <section class="form_section">
+        <section class="container measure_SingUp">
+            <h2>Sign <span>Up</span></h2>
+            <form class="form__container form__measure_SignUp" action="/api/auth/signup" method="POST">
+                <label for="username">
+                    <input type="text" name="username" id="username" placeholder="User" required autocomplete="off">
+                    <span class="userIcon fa"></span>
+                </label>
+                <label  for="email" >
+                    <input type="email" name="email" id="email" placeholder="Email"  required autocomplete="off">
+                    <span class="emailIcon fa"></span>
+                </label>
+                <label  for="password">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span class="passIco fa"></span>
+                </label>
+                <label  for="confirmPassword" >
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                    <span class="confirm_passIco fa"></span>
+                </label>
+                <label for="showPass">
+                    <i id="checkbox" class="checkIcon fa"></i>
+                </label>
+                <button class="button" type="submit" value="Sign Up">Sign Up</button>
+            </form>
+            <div class="links_info">
+                <a [routerLink]="['/auth/signin']">Do you have an account? </a>
+                <p>Clicking "Sign Up", You agree to the VerbsApp <a [routerLink]="['/terms-and-conditions']">Terms and Conditions</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a></p>
+            </div>
+        </section>
+    </section>
+</section>

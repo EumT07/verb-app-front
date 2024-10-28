@@ -1,0 +1,28 @@
+
+<section class="register_main">
+    <div class="house_ico">
+        <a [routerLink]="['/']">
+            <i class="fa house"></i>
+        </a>
+    </div>
+    <section class="form_section">
+        <section class="container measure_SingIn">
+            <h2>Sign <span>In</span></h2>
+            <form class="form__container form__measure_SignIn"  method="POST">
+                <label  for="email" >
+                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
+                    <span class="emailIcon fa"></span>
+                </label>
+                <label  for="password">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <span class="passIco fa"></span>
+                </label>
+                <button class="button" type="submit" value="Sign Up">Sign In</button>
+            </form>
+            <div class="links_info">
+                <a  (click)="openModal()" >Forgot password</a>
+                <a [routerLink]="['/auth/signup']">Don't you have an Account?, Register here.!</a>
+            </div>
+        </section>
+    </section>
+</section>
