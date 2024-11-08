@@ -1,0 +1,18 @@
+.verbs_buttons{
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.verbs_buttons > a {
+    width: 110px;
+    height: 40px;
+    background-color: rgb(21, 21, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 10px;
+}

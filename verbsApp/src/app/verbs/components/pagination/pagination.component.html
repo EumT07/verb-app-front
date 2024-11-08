@@ -1,0 +1,13 @@
+<div class="paginations_container">
+    <div class="paginations_buttons">
+        <div>
+            <i class="fa left-arrow"></i>
+        </div>
+        @for (item of pages; track $index) {
+            <div>{{item}}</div>
+        }
+        <div>
+            <i class="fa right-arrow"></i>
+        </div>
+    </div>
+</div>

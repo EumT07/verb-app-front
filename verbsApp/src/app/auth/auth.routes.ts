@@ -6,11 +6,11 @@ export const routes:Routes = [
         loadComponent: () => import('./components/register/register.component')
     },
     {
-        path: 'signin',
+        path:'signin',
         loadComponent: () => import('./components/login/login.component')
     },
     {
-        path: 'recovery-password',
+        path:'recovery-password',
         loadComponent: () => import('./components/recovery-pass/recovery-pass.component')
     }
 ]

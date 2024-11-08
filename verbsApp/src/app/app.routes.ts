@@ -11,10 +11,15 @@ export const routes: Routes = [
         loadChildren: () => import('./auth/auth.routes')
             .then((r)=> r.routes)
     },
+    // {
+    //     path: 'dashboard',
+    //     loadChildren: () => import('./dashboard/dashboard.routes')
+    //         .then((r) => r.routes)
+    // },
     {
-        path: 'dashboard',
-        loadChildren: () => import('./dashboard/dashboard.routes')
-            .then((r) => r.routes)
+        path: 'verbs',
+        loadChildren: () => import('./verbs/verbs.routes')
+            .then((r)=>r.routes)
     },
     {
         path: 'error',

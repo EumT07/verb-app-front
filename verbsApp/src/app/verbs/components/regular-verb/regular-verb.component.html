@@ -1,0 +1,49 @@
+@defer () {
+    @for (verb of  verbs; track $index) {
+        <div class="verb_container">
+            <h3>{{verb.verbs.infinitive}}</h3>
+            <p class="ipa"> {{verb.verbs.IPA_regular_verbs?.ipa_present_us}}</p>
+            <hr>
+            <p> <b>Def:</b> {{verb.verbs.meaning}}</p>
+            <p><b>Example:</b> {{verb.verbs.meaning}}</p>
+            <div class="ipa_sound_container">
+                <div class="ico_container">
+                    <div>
+                        <i class="fa uk_ipa"></i>
+                    </div>
+                        <p>UK</p>
+                </div>
+                <div class="ico_container">
+                    <div>
+                        <i class="fa uk_ipa"></i>
+                    </div>
+                    <p>US</p>
+                </div>
+            </div>
+        </div>
+    }
+} @placeholder (minimum 4s){
+    @for (item of verb_loading; track $index) {
+        <div class="loading_verbs">
+            <h3 class="loading_info"></h3>
+            <p class="loading_info"> </p>
+            <hr>
+            <p class="loading_info"></p>
+            <p class="loading_info"></p>
+            <div class="ipa_sound_container">
+                <div class="ico_container">
+                    <div>
+                        <i class="fa uk_ipa"></i>
+                    </div>
+                    <p class="loading_info"></p>
+                </div>
+                <div class="ico_container">
+                    <div>
+                        <i class="fa uk_ipa"></i>
+                    </div>
+                    <p class="loading_info"></p>
+                </div>
+            </div>
+        </div>
+    }
+}

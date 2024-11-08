@@ -7,7 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink, SearchEmailComponent],
+  imports: [RouterLink, 
+    // SearchEmailComponent
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

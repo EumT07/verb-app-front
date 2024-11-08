@@ -1,0 +1,7 @@
+export * from "./links"
+export * from "./pagination"
+export * from "./verbsResponse"
+export * from "./regularVerbsRes"
+export * from "./irregularVerbsRes"
+export * from "./verbById"
+export * from "./verbsByName"

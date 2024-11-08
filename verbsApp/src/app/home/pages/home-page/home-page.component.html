@@ -43,69 +43,29 @@
                 </div>
             } @placeholder (minimum 3s){
                 <div class="loading_verbs">
-                    <div>
-                        <h3 class="loading_info"></h3>
-                        <p class="loading_info"> </p>
-                        <hr>
-                        <p class="loading_info"></p>
-                        <p class="loading_info"></p>
-                        <div class="ipa_sound_container">
-                            <div class="ico_container">
-                                <div>
-                                    <i class="fa uk_ipa"></i>
+                    @for (item of verb_loading; track $index) {
+                        <div>
+                            <h3 class="loading_info"></h3>
+                            <p class="loading_info"> </p>
+                            <hr>
+                            <p class="loading_info"></p>
+                            <p class="loading_info"></p>
+                            <div class="ipa_sound_container">
+                                <div class="ico_container">
+                                    <div>
+                                        <i class="fa uk_ipa"></i>
+                                    </div>
+                                    <p class="loading_info"></p>
                                 </div>
-                                <p class="loading_info"></p>
-                            </div>
-                            <div class="ico_container">
-                                <div>
-                                    <i class="fa uk_ipa"></i>
+                                <div class="ico_container">
+                                    <div>
+                                        <i class="fa uk_ipa"></i>
+                                    </div>
+                                    <p class="loading_info"></p>
                                 </div>
-                                <p class="loading_info"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="loading_info"></h3>
-                        <p class="loading_info"> </p>
-                        <hr>
-                        <p class="loading_info"></p>
-                        <p class="loading_info"></p>
-                        <div class="ipa_sound_container">
-                            <div class="ico_container">
-                                <div>
-                                    <i class="fa uk_ipa"></i>
-                                </div>
-                                <p class="loading_info"></p>
-                            </div>
-                            <div class="ico_container">
-                                <div>
-                                    <i class="fa uk_ipa"></i>
-                                </div>
-                                <p class="loading_info"></p>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h3 class="loading_info"></h3>
-                        <p class="loading_info"> </p>
-                        <hr>
-                        <p class="loading_info"></p>
-                        <p class="loading_info"></p>
-                        <div class="ipa_sound_container">
-                            <div class="ico_container">
-                                <div>
-                                    <i class="fa uk_ipa"></i>
-                                </div>
-                                <p class="loading_info"></p>
-                            </div>
-                            <div class="ico_container">
-                                <div>
-                                    <i class="fa uk_ipa"></i>
-                                </div>
-                                <p class="loading_info"></p>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             }
         </div>

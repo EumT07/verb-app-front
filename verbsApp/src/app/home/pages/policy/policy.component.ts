@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './policy.component.css'
 })
 export default class PolicyComponent {
-
+  
 }

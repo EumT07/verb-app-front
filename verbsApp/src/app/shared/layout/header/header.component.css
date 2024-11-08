@@ -13,6 +13,7 @@ header {
     padding-bottom: 10px;
     border-bottom: 0.9px solid #e2dbdb8e;
     background-color: #fff;
+    z-index: 20;
 }
 /* Left side*/
 .left_navbar {
