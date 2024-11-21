@@ -87,23 +87,15 @@
 .about_verbs{
     width: 50%;
     height: 80%;
-    padding: 50px;
+    padding-right: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
-.about_verbs .verbs_container,
-.about_verbs .loading_verbs {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.about_verbs .verbs_container > div,
-.about_verbs .loading_verbs > div {
+
+.about_verbs  > div,
+.about_verbs  > div {
     width: 350px;
     height: 220px;
     background-color: #fcfcfc;
@@ -116,29 +108,26 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.about_verbs .verbs_container > div:nth-child(1),
-.about_verbs .loading_verbs > div:nth-child(1){
+.about_verbs > div:nth-child(1){
     align-self: flex-end;
 }
-.about_verbs .verbs_container > div:nth-child(2),
-.about_verbs .loading_verbs > div:nth-child(2){
+.about_verbs > div:nth-child(2){
     align-self: flex-start;
 }
-.about_verbs .verbs_container > div:nth-child(3),
-.about_verbs .loading_verbs > div:nth-child(3){
+.about_verbs > div:nth-child(3){
     align-self: flex-end;
 }
-.about_verbs .verbs_container div > h3{
+.about_verbs  div > h3{
     font-size: 2rem;
 }
-.about_verbs .verbs_container div .ipa {
+.about_verbs div .ipa {
     font-size: 1.4rem;
     color: rgb(113, 116, 117);
 }
-.about_verbs .verbs_container div hr{
+.about_verbs  div hr{
     width: 80%;
 }
-.about_verbs .verbs_container > div p{
+.about_verbs  > div p{
     font-size: 1rem;
     text-align: left;
     padding-left: 15px;
@@ -180,14 +169,108 @@
 }
 
 
-.loading_info {
+/* .loading_info {
     width: 80%;
     height: 10px;
     background-color: #d8d0d0;
     border-radius: 20px;
-}
+} */
 .about_verbs .loading_verbs div > hr {
     width: 80%;
 }
 
+/*Animations*/
 
+@-webkit-keyframes jello-vertical {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+    30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+            transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes jello-vertical {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+    30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+            transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.jello-vertical {
+	-webkit-animation: jello-vertical 0.9s both;	        animation: jello-vertical 0.9s both;
+}
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }

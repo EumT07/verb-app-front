@@ -1,7 +1,7 @@
 
 @defer () {
     @for (verb of  verbs; track $index) {
-        <div class="verb_container">
+        <div class="verb_container scroll_verb">
             <h3>{{verb.infinitive}}</h3>
             @if (verb.IPA_regular_verbs !== null) {
                 <p class="ipa"> {{verb.IPA_regular_verbs?.ipa_present_us}}</p>

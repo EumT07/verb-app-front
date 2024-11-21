@@ -10,4 +10,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'verbsApp';
+  onActive(){
+    if (typeof window !== 'undefined') {
+      // Browser-specific code, like scrolling to the top
+      window.scrollTo(0, 0);
+    }
+  }
 }

@@ -1,12 +1,12 @@
-<div class="paginations_container">
+<div class="paginations_container" >
     <div class="paginations_buttons">
-        <div>
+        <div (click)="previousPage.emit(currentPage)" (click)="upPage()">
             <i class="fa left-arrow"></i>
         </div>
-        @for (item of pages; track $index) {
-            <div>{{item}}</div>
+        @for (page of pages; track $index) {
+            <div (click)="pageSelected.emit(page)" (click)="upPage()">{{page}}</div>
         }
-        <div>
+        <div  (click)="nextPage.emit(currentPage)" (click)="upPage()">
             <i class="fa right-arrow"></i>
         </div>
     </div>

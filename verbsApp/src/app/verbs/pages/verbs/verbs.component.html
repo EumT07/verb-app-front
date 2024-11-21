@@ -7,7 +7,12 @@
     <section class="verbs">
         <app-verb class="app_container" [verbs]="verbs" [verb_loading]="verb_loading" />
         @defer () {
-            <app-pagination [totalPages]="totalPages"/>
+            <app-pagination 
+            [totalPages]="totalPages" 
+            [currentPage]="currentPage" 
+            (pageSelected)="pageSelected($event)"
+            (nextPage)="nextPage()"
+            (previousPage)="previousPage()"/>
         } @placeholder (minimum 5s)  {
             <div class="loading_icon">
                 <i class="fas fa-spinner fa-spin"></i>

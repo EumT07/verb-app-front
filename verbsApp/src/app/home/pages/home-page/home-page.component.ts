@@ -44,4 +44,6 @@ export default class HomePageComponent {
   verb_loading: number[] = [1,2,3]
 
   
+
+  
 }

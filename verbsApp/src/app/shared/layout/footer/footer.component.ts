@@ -11,10 +11,12 @@ import { Links } from "../../interfaces/links"
 })
 export class FooterComponent {
   email:string = "verbsapp@gmail.com";
+  address:string = "Anzoátegui - Venezuela";
+  phone:string = "+58 4248182793"
   links: Links[] = [
     {name: "Home",route: '/'},
     // {name: "Dashboard",route: '/dashboard'},
-    {name: "About",route: '/about'},
+    // {name: "About",route: '/about'},
     {name: "Team",route: '/team'},
     {name: "Verbs",route: '/verbs'},
   ]

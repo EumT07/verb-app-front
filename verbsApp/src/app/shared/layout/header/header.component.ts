@@ -13,7 +13,7 @@ export class HeaderComponent {
   links: Links[] = [
     {name: "Home",route: '/'},
     // {name: "Dashboard",route: '/dashboard'},
-    {name: "About",route: '/about'},
+    // {name: "About",route: '/about'},
     {name: "Team",route: '/team'},
     {name: "Verbs",route: '/verbs'},
   ]

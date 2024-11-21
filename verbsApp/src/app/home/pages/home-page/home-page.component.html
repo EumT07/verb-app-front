@@ -1,13 +1,13 @@
 <app-header/>
-<section class="home">
-    <section class="home_header">
+<section id="home" class="home">
+    <section class="home_header scroll_movement">
         <div>
-            <h1>Feel free to browse through our +200 <a [routerLink]="['/verbs']">verbs</a>!</h1>
-            <p>Stop mispronouncing verbs, practicing and improving verbs to increase your English level.</p>
-            <a class="join_us" [routerLink]="['/auth/signup']">Join <span>Us</span></a>
+            <h1 class="text-focus-in">Feel free to browse through our +200 <a [routerLink]="['/verbs']">verbs</a>!</h1>
+            <p class="text-focus-in">Stop mispronouncing verbs, practicing and improving verbs to increase your English level.</p>
+            <!-- <a class="join_us text-focus-in" [routerLink]="['/auth/signup']">Join <span>Us</span></a> -->
         </div>
     </section>
-    <section class="home_about">
+    <section class="home_about scroll_movement">
         <div class="about_info" >
             <h1>Hi there..!!</h1>
             <p>In verbsApp you will find almost all common verbs used by English speakers, these verbs will help you to improve your knowledge, improve your pronunciation by the hand of their International Phonetic Alphabet sounds. Learning with the International Phonetic Alphabet (IPA) will help you sound like American, British or native English speakers, we also include phrasal verbs, which are important verbs because they are used daliy by English speakers.</p>
@@ -16,9 +16,8 @@
         </div>
         <div class="about_verbs">
             @defer{
-                <div class="verbs_container">
                     @for (verb of verbsList; track $index) {
-                        <div>
+                        <div class="jello-vertical">
                             <h3>{{verb.verb}}</h3>
                             <p class="ipa"> {{verb.ipa_us}}</p>
                             <hr>
@@ -40,9 +39,7 @@
                             </div>
                         </div>   
                     }
-                </div>
             } @placeholder (minimum 3s){
-                <div class="loading_verbs">
                     @for (item of verb_loading; track $index) {
                         <div>
                             <h3 class="loading_info"></h3>
@@ -66,10 +63,9 @@
                             </div>
                         </div>
                     }
-                </div>
             }
         </div>
     </section>
-    <app-faqs/>
+    <app-faqs class="scroll_movement"/>
 </section>
-<app-footer/>
+<app-footer class="scroll_movement"/>

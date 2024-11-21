@@ -21,27 +21,54 @@ export default class IrregularVerbsComponent {
   verbs: irregularVerbs[] = []
   verb_loading: number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
   totalPages = 1;
+  page: number = 1
+  limit: number = 30
+  currentPage: number = 1
+  lastPage: number = 0
 
 
   private readonly verbService = inject(VerbsService)
   private readonly router = inject(Router)
   
   ngOnInit(){
-      const page = 1
-      const limit = 30
-      this.verbService.getIrregularVerbs({page, limit})
-      // .subscribe(result => this.verbs = result.irregularVerbs)
-      .subscribe({
-        next: result => { 
-          this.verbs = result.irregularVerbs;
-          this.totalPages = result.metaData.totalRegisters;
-          console.log(this.totalPages);
-        },
-        error: e => {
-            this.router.navigate(["/error/server"])
-            throw new Error(e.message);
-        }
-    })
+    this.irregularVerbs(this.page, this.limit)
+}
+
+irregularVerbs(page: number, limit: number){
+  this.verbService.getIrregularVerbs({page, limit})
+    // .subscribe(result => this.verbs = result.regularVerbs)
+    .subscribe({
+      next: result => { 
+        this.verbs = result.irregularVerbs;
+        this.totalPages = result.metaData.totalRegisters;
+        this.lastPage = result.metaData.lastPage;
+      },
+      error: e => {
+          console.log(e.message);
+          this.router.navigate(["/error/server"])
+          throw new Error(e.message);
+      }
+  })
+}
+
+nextPage(){
+  this.currentPage += 1
+  if(this.currentPage >= this.lastPage){
+      this.currentPage = this.lastPage;
   }
+  this.irregularVerbs(this.currentPage, this.limit)
+}
+
+previousPage(){
+    if(this.currentPage > 1){
+      this.currentPage -= 1
+    }
+    this.irregularVerbs(this.currentPage, this.limit)
+}
+
+pageSelected(page:number){
+    this.currentPage = page
+    this.irregularVerbs(page, this.limit)
+}
 }
 

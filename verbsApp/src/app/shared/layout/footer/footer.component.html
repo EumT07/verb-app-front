@@ -8,7 +8,7 @@
                         <div>
                             <i class="fa location"></i>
                         </div>
-                        <p><span>Address:</span> Anzoátegui - Venezuela</p>
+                        <p><span>Address:</span> {{address}}</p>
                     </li>
                     <li>
                         <div>
@@ -20,7 +20,7 @@
                         <div>
                             <i class="fa phone"></i>
                         </div>
-                        <p><span>Phone:</span> +58 4248182793</p>
+                        <p><span>Phone:</span> {{phone}}</p>
                     </li>
                 </ul>
             </div>
@@ -33,15 +33,15 @@
                         </li>
                     }
                 </ul>
-    
+
             </div>
-            <div class="policy">
+            <!-- <div class="policy">
                 <h3>Legal</h3>
                 <ul>
                     <li><a [routerLink]="['/privacy-policy']" id="privacy">Privacy Policy</a></li>
                     <li><a [routerLink]="['/terms-and-conditions']" id="terms">Terms and Conditions</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="languages">
                 <h3>Languages</h3>
                 <div class="flag_container">
@@ -68,9 +68,9 @@
                         </div>
                 </div>
                 <div class="links_follow">
-                    <a class="join_us" [routerLink]="['/auth/signup']">
+                    <!-- <a class="join_us" [routerLink]="['/auth/signup']">
                         Join <span>us</span>
-                    </a>
+                    </a> -->
                     <a [routerLink]="['/']" class="buymecoffee">
                         <div class="coffeeLogo_container">
                             <img src="/images/coffee.png" alt="">

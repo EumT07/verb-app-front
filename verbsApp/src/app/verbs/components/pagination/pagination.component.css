@@ -8,7 +8,7 @@
     align-items: center;
 }
 .paginations_container .paginations_buttons{
-    width: 550px;
+    width: 680px;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -30,11 +30,12 @@
     background-color: rgba(236, 236, 241, 0.555);
 }
 .paginations_buttons div:first-child:hover,
-.paginations_buttons div:last-child:hover
-{
-    background-color: rgba(224, 224, 230, 0.575);
+.paginations_buttons div:last-child:hover{
+    background-color: rgb(12, 12, 12);
+    color: #fff;
+
 }
-.paginations_buttons div:nth-child(2){
+.paginations_buttons div{
     width: 30px;
     height:30px;
     border-radius: 10%;
@@ -42,6 +43,11 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(236, 236, 241, 0.555);
+}
+
+.paginations_buttons div:hover{
+    background-color: rgb(12, 12, 12);
+    color: #fff;
 }
 
 .left-arrow::before{

@@ -7,7 +7,7 @@
     align-items: center;
 }
 .FAQ .questions{
-    width: 80%;
+    width: 90%;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
     /* color: #d32324; */
     font-size: 1.2rem;
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 0.2px;
 }
 .FAQ .questions > article {
     padding: 1.5rem 1rem 0.5rem 1rem;
@@ -32,7 +32,7 @@
     box-shadow: 1px 1px 6px #b9b6b6;
     border-radius: 20px;
     margin-bottom: 15px;
-    width: 40vw;
+    width: 500px;
 }
 .FAQ .questions article .question{
     display: flex;
@@ -43,7 +43,7 @@
     color: #000000;
     font-size: 1.2rem;
     font-weight: bold;
-    letter-spacing: 1.3px;
+    letter-spacing: 1px;
 }
 .FAQ .questions article button{
     font-size: 1.5rem;
@@ -66,7 +66,7 @@
 }
 .FAQ .questions article .answer p {
     margin-bottom: 0;
-    color: #000000;
+    color: #575353;
     font-size: 1.2rem;
     text-align: justify;
     font-family: 'Open Sans', sans-serif;
