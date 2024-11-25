@@ -17,4 +17,5 @@ export class HeaderComponent {
     {name: "Team",route: '/team'},
     {name: "Verbs",route: '/verbs'},
   ]
+  
 }

@@ -1,7 +1,7 @@
 export  interface VerbById {
     status: number,
     message: string,
-    verbs: {
+    verb: {
         infinitive: string,
         present: string,
         past: string,

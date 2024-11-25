@@ -3,8 +3,7 @@
     <app-search/>
     <app-buttons/>
 </section>
-<section class="verbs_container">
-    <section class="verbs">
+<section class="verbs">
         <app-regular-verb class="app_container" [verbs]="verbs" [verb_loading]="verb_loading"/>
         @defer () {
             <app-pagination 
@@ -19,5 +18,5 @@
                 <i class="fas fa-spinner fa-spin"></i>
             </div>
         }
-    </section>
 </section>
+

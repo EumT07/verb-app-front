@@ -33,7 +33,7 @@ export class VerbsService {
     .pipe(map((response: Object) => response as IrregularVerbsResponse ))
   }
 
-  getVerbById(id: number){
+  getVerbById(id: string | undefined){
     const url = `${this.baseURL}/verbs/${id}`
     return this._http
     .get(url)

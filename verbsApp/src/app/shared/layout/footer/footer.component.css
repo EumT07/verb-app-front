@@ -158,7 +158,7 @@ footer hr{
 }
 
 .links_follow {
-    height: 150px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

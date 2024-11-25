@@ -8,7 +8,7 @@ import { PaginationComponent } from '../../components/pagination/pagination.comp
 @Component({
   selector: 'app-phrasal-verbs',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, SearchComponent, VerbComponent, ButtonsComponent, PaginationComponent],
+  imports: [HeaderComponent, SearchComponent, VerbComponent, ButtonsComponent, PaginationComponent],
   templateUrl: './phrasal-verbs.component.html',
   styleUrl: './phrasal-verbs.component.css'
 })

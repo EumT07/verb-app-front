@@ -7,6 +7,7 @@ import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
+import { VerbModalComponent } from "../../components/verb-modal/verb-modal.component";
 
 
 @Component({

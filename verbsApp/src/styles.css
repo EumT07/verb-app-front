@@ -290,14 +290,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
 
 /*Verbs*/
-
-.verbs_container{
-    max-width: 100vw;
-    height: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    /* margin-bottom: 250px; */
-}
 .searching{
     position: fixed;
     max-width: 100vw;
@@ -314,10 +306,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     z-index: 20;
 }
 
-.verbs_container .verbs{
+.verbs{
     position: relative;
-    top: 140px;
+    top: 160px;
     max-width: 100%;
+    min-height: 75vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .app_container {
     display: grid;
