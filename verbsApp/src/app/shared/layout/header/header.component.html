@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
     <div class="nav_container">
         <div class="left_navbar">
             <div class="logo_container">
@@ -14,19 +14,7 @@
                     }
             </div>
         </div>
-        <div class="righ_navbar">
-            <!-- <div class="right_navigation">
-                <div class="register_container">
-                    <a class="signin" [routerLink]="['/auth/signin']" routerLinkActive="router-link-active" >Sign In</a>
-                    <a class="signup" [routerLink]="['/auth/signup']">Sign Up</a>
-                </div>
-            </div> -->
-            <!-- <div class="options_navigation">
-                <div class="img_users">
-                    <img src="/images/boticon.ico" alt="user image">
-                </div>
-                <i class="fa set"></i>
-            </div> -->
+        
             <div class="wrapper_darkmode">
                 <div class="dark-container">
                     <input type="checkbox" class="checkbox" id="chk">
@@ -44,4 +32,31 @@
             </div>
         </div>
     </div>
-</header>
+</header> -->
+
+<header class="header">
+    <nav class="container nav">
+      <div class="logo">
+        <h1>VerbMaster</h1>
+      </div>
+      
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" [class.active]="isMenuOpen">
+        @for ( route of links; track route.name) {
+            <li class="links">
+                <a href="{{route.route}}">{{route.name}}</a>
+            </li>
+        }
+        <li>
+          <button class="theme-toggle" (click)="toggleTheme()">
+            {{ isDarkMode ? '🌞' : '🌙' }}
+          </button>
+        </li>
+    </div>
+    </nav>
+  </header>

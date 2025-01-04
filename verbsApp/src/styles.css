@@ -1,8 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4f46e5;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --secondary-bg: #f3f4f6;
+    --header-height: 4rem;
+    --border-box: #a19d9d;
+    --border-box-shadow: #646262;
+    
+}
+
+[data-theme="dark"] {
+    --primary-color: #818cf8;
+    --text-color: #f3f4f6;
+    --bg-color: #1f2937;
+    --secondary-bg: #111827;
+}
+
 * {
     margin: 0;
-    box-sizing: 0;
+    padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+    padding: 3rem 0;
+    }
 }
 
 /*Errors*/
@@ -293,22 +339,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 .searching{
     position: fixed;
     max-width: 100vw;
-    top: 81px;
+    top: 64px;
     right: 0;
     left: 0;
     bottom: 0;
-    height: 120px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
+    background-color: var(--bg-color);
     z-index: 20;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .verbs{
     position: relative;
-    top: 160px;
+    top: 240px;
     max-width: 100%;
     min-height: 75vh;
     margin-left: 10px;

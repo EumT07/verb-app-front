@@ -1,0 +1,19 @@
+<div class="language-dropdown">
+    <button class="current-lang" (click)="toggleDropdown()">
+      <img [src]="getCurrentFlag()" [alt]="getCurrentName()" class="flag-icon">
+    </button>
+    
+    <div class="lang-options" [class.show]="isOpen">
+      @for (lang of languages; track $index) {
+        <button
+        (click)="selectLanguage(lang.code)"
+        class="lang-option"
+        [class.active]="currentLang === lang.code"
+      >
+        <img [src]="lang.flag" [alt]="lang.name" class="flag-icon">
+        <span class="lang-name">{{ lang.name }}</span>
+      </button>
+      }
+      
+    </div>
+  </div>

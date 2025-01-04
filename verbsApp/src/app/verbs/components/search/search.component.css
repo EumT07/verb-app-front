@@ -1,6 +1,8 @@
 div {
     width: 250px;
     background-color: #fff;
+    border-radius: 10px;
+
 }
 div > label{
     width: 200px;

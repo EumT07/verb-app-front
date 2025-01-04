@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(58, 56, 56, 0.76);
-    z-index: 20;
+    z-index: 300;
 }
 
 .modal__content{
