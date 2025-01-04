@@ -5,7 +5,8 @@ export interface irregularVerbs {
         infinitive: string,
         present: string,
         type: string,
-        meaning: string,
+        meaning_spn: string,
+        definition: string,
         IPA_irregular_verbs?: {
             ipa_present_uk?: string ,
             ipa_present_us?: string 

@@ -6,15 +6,13 @@
                     <img class="verbsapplogo" src="/images/boticon.ico" alt="verbs app">
                 </a>
             </div>
-            <nav class="left_navigation">
-                <ul>
+            <div class="left_navigation">
                     @for ( route of links; track route.name) {
-                        <li>
+                        <div class="links">
                             <a [routerLink]="route.route">{{route.name}}</a>
-                        </li>
+                        </div>
                     }
-                </ul>
-            </nav>
+            </div>
         </div>
         <div class="righ_navbar">
             <!-- <div class="right_navigation">
@@ -38,6 +36,11 @@
                         <div class="ball"></div>
                     </label>
                 </div>           
+            </div>
+        </div>
+        <div class="menu_container">
+            <div>
+                <i class="fas menu"></i>
             </div>
         </div>
     </div>

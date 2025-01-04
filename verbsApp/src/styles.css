@@ -344,8 +344,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 /*Verbs Card*/
 .verb_container, .loading_verbs {
     align-items: center;
-    width: 290px;
-    height: 200px;
+    width: 240px;
+    height: 180px;
     background-color: #fcfcfc;
     border: 0.2px solid #e4dfdf ;
     border-radius: 20px;
@@ -364,14 +364,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 }
 
 .verb_container > h3{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 .verb_container .ipa {
     font-size: 1.2rem;
     color: rgb(113, 116, 117);
 }
 .verb_container hr{
-    width: 80%;
+    width: 60%;
 }
 .about_verbs .verbs_container > div p{
     font-size: 1rem;
@@ -384,8 +384,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
-    height: 25%;
+    width: 70%;
+    height: 40%;
 }
 .ipa_sound_container .ico_container {
     width: 50px;
@@ -393,6 +393,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.ipa_sound_container .ico_container > img{
+    width: 40px;
+    height: 38px;
 }
 .ipa_sound_container .ico_container > div {
     display: flex;

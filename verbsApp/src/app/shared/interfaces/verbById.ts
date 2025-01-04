@@ -7,8 +7,12 @@ export  interface VerbById {
         past: string,
         past_participle: string,
         present_participle: string,
-        meaning: string,
+        meaning_spn: string,
+        definition: string,
         type: string,
+        RegularVerbs: {
+            past_sound: string
+        } | null,
         IPA_regular_verbs?: {
             ipa_present_uk: string,
             ipa_present_us: string,

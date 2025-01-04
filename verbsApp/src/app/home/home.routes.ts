@@ -9,10 +9,10 @@ export const routes: Routes = [
     //     path: 'about',
     //     loadComponent: () => import('./pages/about/about.component')
     // },
-    {
-        path: 'team',
-        loadComponent: () => import('./pages/team/team.component')
-    },
+    // {
+    //     path: 'team',
+    //     loadComponent: () => import('./pages/team/team.component')
+    // },
     // {
     //     path: 'terms-and-conditions',
     //     loadComponent: () => import('./pages/terms/terms.component')

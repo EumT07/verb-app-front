@@ -8,188 +8,210 @@
                         <h5>{{verbDetail?.type}}</h5>
                     </div>
                     <hr>
-                    <h4>Definition</h4>
-                    
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quasi ea doloremque rerum eum blanditiis quas in laudantium velit aliquam, vero officiis praesentium eveniet obcaecati maxime aut nostrum nesciunt nisi voluptates deserunt qui voluptas.</p>
-                    <div class="ipa_verb_container">
-                        @if(verbDetail?.IPA_regular_verbs !== null){
-                            <div>
-                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_uk}}</h4>
-                                <div class="ipa_icon_container">
-                                    <i class="fa uk_ipa"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_us}}</h4>
-                                <div class="ipa_icon_container">
-                                    <i class="fa us_ipa"></i>
-                                </div>
-                            </div>
-                        }@else{
-                            <div>
-                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_uk}}</h4>
-                                <div class="ipa_icon_container">
-                                    <i class="fa uk_ipa"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_us}}</h4>
-                                <div class="ipa_icon_container">
-                                    <i class="fa us_ipa"></i>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                </div>
-                <div class="exmp_content">
-                    <h3>Examples</h3>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae.</li>
-                    </ul>
+                    <h4>Definition:</h4>
+                    <p>{{verbDetail?.definition}}</p>
                 </div>
                 <div class="tense_content">
                     <h3>Verbs Tense</h3>
                     <div class="verbsTense_container">
-                        <div >
-                            <h2>Present</h2>
-                            <hr>
-                            <h3>{{verbDetail?.present}}</h3>
-                            <div class="ipa_verbsTense_container">
-                                @if(verbDetail?.IPA_regular_verbs !== null){
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
+                        <div>
+                            <h3>Present</h3>
+                            <!-- <p>The present tense in verbs is a verb form that expresses actions or states that are happening now or that are generally true. It is used to describe actions that are currently taking place, habitual actions, thoughts, and feelings</p> -->
+                            <div class="tense_container">
+                                <h4>{{verbDetail?.present}}</h4>
+                                <div class="ipa_verb_container">
+                                    @if(verbDetail?.IPA_regular_verbs !== null){
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                }@else{
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
+                                    }@else{
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                        <div >
-                            <h2>Past</h2>
-                            <hr>
-                            <h3>{{verbDetail?.past}}</h3>
-                            <div class="ipa_verbsTense_container">
-                                @if(verbDetail?.IPA_regular_verbs !== null){
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
-                                        </div>
-                                    </div>
-                                }@else{
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
-                                        </div>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                        <div >
-                            <h2>Past Participle</h2>
-                            <hr>
-                            <h3>{{verbDetail?.past_participle}}</h3>
-                            <div class="ipa_verbsTense_container">
-                                @if(verbDetail?.IPA_regular_verbs !== null){
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_participle_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_participle_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
-                                        </div>
-                                    </div>
-                                }@else{
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_participle_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_participle_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
-                                        </div>
-                                    </div>
-                                }
+                                    }
+                                </div>
                             </div>
                         </div>
                         <div>
-                            <h2>Present Participle</h2>
-                            <hr>
-                            <h3>{{verbDetail?.present_participle}}</h3>
-                            <div class="ipa_verbsTense_container">
-                                @if(verbDetail?.IPA_regular_verbs !== null){
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_participle_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
+                            <h3>Past</h3>
+                            <!-- <p>The past tense of a verb is used to describe actions or states that happened in the past. It's a grammatical form that indicates that something occurred before the current moment.</p> -->
+                            @if (verbDetail?.RegularVerbs !== null) {
+                                <p>Past Sounds: <b>{{verbDetail?.RegularVerbs?.past_sound}}</b> </p>
+                            }
+                            <div class="tense_container">
+                                <h4>{{verbDetail?.past}}</h4>
+                                <div class="ipa_verb_container">
+                                    @if(verbDetail?.IPA_regular_verbs !== null){
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_participle_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                }@else{
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_participle_uk}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa uk_ipa"></i>
+                                    }@else{
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_participle_us}}</h4>
-                                        <div class="ipa_icon_container">
-                                            <i class="fa us_ipa"></i>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                }
+                                    }
+                                </div>
                             </div>
+                        </div>
+                        <div>
+                            <h3>Past Participle</h3>
+                            <!-- <p>The past participle is a versatile verb form that signifies a completed action in the past. </p> -->
+                            @if (verbDetail?.RegularVerbs !== null) {
+                                <p>Past Sounds: <b>{{verbDetail?.RegularVerbs?.past_sound}}</b> </p>
+                            }
+                            <div class="tense_container">
+                                <h4>{{verbDetail?.past_participle}}</h4>
+                                <div class="ipa_verb_container">
+                                    @if(verbDetail?.IPA_regular_verbs !== null){
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_participle_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_past_participle_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }@else{
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_participle_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_past_participle_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Present Participle</h3>
+                            <!-- <p>The present participle is a verb form that ends in "ing." It's used to express ongoing or continuous actions, as well as to function as an adjective</p> -->
+                            <div class="tense_container">
+                                <h4>{{verbDetail?.present_participle}}</h4>
+                                <div class="ipa_verb_container">
+                                    @if(verbDetail?.IPA_regular_verbs !== null){
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_participle_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_regular_verbs?.ipa_present_participle_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }@else{
+                                        <div class="ipa_verb_lng">
+                                            <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_participle_uk}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa uk_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ipa_verb_lng">
+                                            <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                                            <div>
+                                                <h4 class="ipa_text">{{verbDetail?.IPA_irregular_verbs?.ipa_present_participle_us}}</h4>
+                                                <div class="ipa_icon_container">
+                                                    <i class="fa us_ipa"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

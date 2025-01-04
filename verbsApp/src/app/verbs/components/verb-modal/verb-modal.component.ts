@@ -31,7 +31,6 @@ export class VerbModalComponent {
       .subscribe({
         next: result => {
           this.verbDetail = result.verb;
-          console.log(this.verbDetail);
           
         },
         error: e => {

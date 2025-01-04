@@ -3,7 +3,7 @@
     /* height: 100vh; */
 }
 .home .home_header{
-    max-width: 100vw;
+    max-width: 100%;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -12,15 +12,15 @@
     padding: 100px 0px;
 }
 .home .home_header div {
-    width: 50%;
-    height: 300px;
+    width: 80%;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 .home .home_header div > h1 {
-    font-size: 3.4rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
 }
@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 .home .home_header div > p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
     color: rgb(97, 96, 95);
 }
@@ -50,123 +50,7 @@
 .join_us span {
     color: rgb(238, 10, 10);
 }
-/*About*/
-.home .home_about{
-    max-width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.about_info{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 550px;
-    margin-left: 120px;
-    margin-right: 120px;
-    padding: 40px;
-    /* background-color: #f7bb3c; */
-    border-radius: 10px;
-    text-align: justify;
-    /* overflow: hidden; */
-}
-.about_info h1{
-    font-size: 2.5rem;
-}
-.about_info p{
-    font-size: 1.3rem;
-    color: rgb(84, 86, 87);
-    background-color: rgba(229, 231, 233, 0.301);
-    padding: 20px;
-    border-radius: 20px;
-}
-.about_verbs{
-    width: 50%;
-    height: 80%;
-    padding-right: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.about_verbs  > div,
-.about_verbs  > div {
-    width: 350px;
-    height: 220px;
-    background-color: #fcfcfc;
-    box-shadow: 1px 1px 6px #b9b6b6;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.about_verbs > div:nth-child(1){
-    align-self: flex-end;
-}
-.about_verbs > div:nth-child(2){
-    align-self: flex-start;
-}
-.about_verbs > div:nth-child(3){
-    align-self: flex-end;
-}
-.about_verbs  div > h3{
-    font-size: 2rem;
-}
-.about_verbs div .ipa {
-    font-size: 1.4rem;
-    color: rgb(113, 116, 117);
-}
-.about_verbs  div hr{
-    width: 80%;
-}
-.about_verbs  > div p{
-    font-size: 1rem;
-    text-align: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.ipa_sound_container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    height: 25%;
-}
-.ipa_sound_container .ico_container {
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.ipa_sound_container .ico_container > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0ede8;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.uk_ipa::before{
-    content: "\f028";
-}
-.us_ipa::before{
-    content: "\f028";
-}
 
 
 /* .loading_info {
@@ -274,3 +158,19 @@
       opacity: 1;
     }
   }
+
+  /*Media queries*/
+
+@media screen and (max-width: 900px) {
+    .home .home_header div {
+        width: 80%;
+        height: 80vh;
+    }
+    .home .home_header div > h1{
+        font-size: 2.5rem;
+    }
+    .home .home_header div > p{
+        font-size: 1.3rem;
+    }
+    
+}
