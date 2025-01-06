@@ -85,13 +85,35 @@
     <h4>VerbsApp all rights reserved © 2024</h4>
 </footer> -->
 <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
+    <div class="footer-content">
+        <div class="footer-section">
         <h3>VerbMaster</h3>
         <p>{{ translate('footer.slogan') }}</p>
-        <app-language-selector/>
-      </div>
-      <div class="footer-section">
+        </div>
+        <div class="footer-section contact">
+            <h4>{{ translate('footer.contact') }}</h4>
+            <ul>
+                <li>
+                    <div>
+                        <i class="fa location"></i>
+                    </div>
+                    <p>{{address}}</p>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa paper_plane"></i>
+                    </div>
+                    <p  id="clipboard"> {{email}}<i class="far fa-copy"></i></p>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa phone"></i>
+                    </div>
+                    <p>{{phone}}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-section">
         <h4>{{ translate('footer.quickLinks') }}</h4>
         <ul>
             @for ( route of links; track route.name) {
@@ -100,16 +122,26 @@
                 </li>
             }
         </ul>
-      </div>
-      <div class="footer-section">
-        <h4>{{ translate('footer.contact') }}</h4>
-        <p>Email: infoverbmaster.com</p>
-        <p>Phone: (555) 123-4567</p>
-      </div>
+        </div>
+        <div class="footer-section languages">
+            <h3>Languages</h3>
+            <app-language-selector/>
+        </div>
+        
     </div>
+    <div class="links_follow">
+        <a [routerLink]="['/']" class="buymecoffee">
+        <div class="coffeeLogo_container">
+            <img src="/images/coffee.png" alt="">
+        </div>
+        <p>Buy me a Coffee</p>
+        </a>
+    </div>
+    <hr>
     <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2024 VerbMaster. {{ translate('footer.rights') }}</p>
+        <div class="container">
+            
+            <p>&copy; 2024 VerbMaster. {{ translate('footer.rights') }}</p>
       </div>
     </div>
   </footer>

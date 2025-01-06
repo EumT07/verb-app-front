@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Links } from '../../interfaces/links';
+import { DarkModeLocalstorageService } from '../../services/dark-mode-localstorage.service';
 
 @Component({
   selector: 'app-header',
@@ -20,14 +21,37 @@ export class HeaderComponent {
 
   isDarkMode = false;
   isMenuOpen = false;
+  private readonly darkModeValue = inject(DarkModeLocalstorageService)
+
+  constructor(){
+    this.checkDarkLocalStorage();
+  }
 
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
+
+    if(this.isDarkMode){
+      this.darkModeValue.setdarkMode(this.isDarkMode);
+    }else{
+      this.darkModeValue.setdarkMode(this.isDarkMode);
+    }
+
     document.documentElement.setAttribute('data-theme', this.isDarkMode ? 'dark' : 'light');
+  
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-  
+
+  checkDarkLocalStorage() {
+    if(typeof window !== 'undefined'){
+      this.isDarkMode = this.darkModeValue.getDarkMode();
+      document.documentElement.setAttribute('data-theme', this.isDarkMode ? 'dark' : 'light');
+      console.log("Valor Obtenid", this.isDarkMode);
+      
+    }
+    
+  }
+
 }

@@ -4,7 +4,10 @@
             <i class="fa left-arrow"></i>
         </div>
         @for (page of pages; track $index) {
-            <div (click)="pageSelected.emit(page)" (click)="upPage()">{{page}}</div>
+            <div 
+            [style.backgroundColor]="page === currentPage ? 'var(--primary-color)':'rgba(236, 236, 241, 0.555)'"
+            [style.color]="page === currentPage ? '#fff':'#000'"
+            (click)="pageSelected.emit(page)" (click)="upPage()">{{page}}</div>
         }
         <div  (click)="nextPage.emit(currentPage)" (click)="upPage()">
             <i class="fa right-arrow"></i>

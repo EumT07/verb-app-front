@@ -214,23 +214,40 @@ footer hr{
 
 
 .footer {
-    background-color: var(--secondary-bg);
-    padding-top: 3rem;
-    margin-top: 4rem;
+    /* background-color: var(--secondary-bg); */
+    background-color: var(--bg-footer);
+    padding-top: 2rem;
+    /* margin-top: 4rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
   }
 
   .footer-content {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 3rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
   }
-
+  .footer-content > div{
+    align-self: baseline;
+    width: 100%;
+    text-align: center;
+  }
   .footer-section h3, .footer-section h4 {
     color: var(--primary-color);
     margin-bottom: 1rem;
   }
-
+  .footer-section p{
+    color: var(--text-color-footer);
+  }
   .footer-section ul {
     list-style: none;
   }
@@ -240,7 +257,7 @@ footer hr{
   }
 
   .footer-section a {
-    color: var(--text-color);
+    color: var(--text-color-footer);
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -249,15 +266,112 @@ footer hr{
     color: var(--primary-color);
   }
 
+  .contact > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact > ul > li {
+    width: 280px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.contact > ul > li > div{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4946469f;
+    border-radius: 50%;
+}
+.contact > ul > li > div:hover{
+    background-color: #5350509f;
+}
+.contact > ul > li > p{
+    margin-left: 10px;
+    text-align: center;
+}
+
+.location::before{
+    content: "\f3c5";
+    color: var(--text-color-footer);
+}
+.paper_plane::before {
+    content: "\f1d8";
+    color: var(--text-color-footer);
+
+}
+.phone::before {
+    content: "\f095";
+    color: var(--text-color-footer);
+
+}
+
   .footer-bottom {
-    border-top: 1px solid var(--text-color);
     padding: 1.5rem 0;
     text-align: center;
   }
+  hr{
+    color: var(--text-color-footer);
+    border: 1px solid var(--text-color-footer);
+    width: 90%;
+  }
+  .footer-bottom p{
+    color: var(--text-color-footer);
+  }
+  .links_follow{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .buymecoffee {
+    display: flex;
+    width: 164px;
+    height: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
 
-  @media (max-width: 768px) {
+.coffeeLogo_container {
+    width: 20px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buymecoffee .coffeeLogo_container img{
+    width: 90%;
+    height: 90%;
+}
+.buymecoffee p {
+    color: #553c06;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+  @media (max-width: 800px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     .footer-content {
-      grid-template-columns: 1fr;
-      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact > ul > li{
+        justify-content: center;
     }
   }

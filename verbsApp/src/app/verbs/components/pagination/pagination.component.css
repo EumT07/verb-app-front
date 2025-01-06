@@ -45,9 +45,9 @@
     background-color: rgba(236, 236, 241, 0.555);
 }
 
+
 .paginations_buttons div:hover{
-    background-color: rgb(12, 12, 12);
-    color: #fff;
+    box-shadow: 1px 1.2px 4px #858282;
 }
 
 .left-arrow::before{

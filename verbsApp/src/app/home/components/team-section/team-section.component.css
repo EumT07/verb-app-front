@@ -1,6 +1,6 @@
 .team {
     background-color: var(--bg-color);
-    height: 70vh;
+    height: auto;
   }
 
   .team h2 {

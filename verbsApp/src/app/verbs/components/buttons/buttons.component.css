@@ -16,4 +16,25 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 10px;
+    text-align: center;
+}
+@media screen and (max-width: 620px) {
+    .verbs_buttons{
+        width: 100%;
+    }
+    .verbs_buttons > a{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 510px) {
+    .verbs_buttons > a{
+        width: 90px;
+        font-size: auto;
+    }
+}
+@media screen and (max-width: 380px) {
+    .verbs_buttons > a{
+        width: 70px;
+        font-size: auto;
+    }
 }
