@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(58, 56, 56, 0.76);
+    background-color: rgba(46, 44, 44, 0.76);
     z-index: 300;
 }
 
@@ -59,6 +59,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.modal_info_title h1, h4, h5, p {
+  color: var(--verb-text);
+}
 .tense_content{
   margin-top: 15px;
   display: flex;
@@ -69,6 +72,9 @@
 .verbsTense_container{
   width: 100%;
   margin-top: 15px;
+}
+.verbsTense_container div ,h4, h3, p {
+  color: var(--verb-text);
 }
 .tense_container {
   height: 20vh;

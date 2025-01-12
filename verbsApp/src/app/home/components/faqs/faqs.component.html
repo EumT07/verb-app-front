@@ -21,17 +21,17 @@
 </section> -->
 
 <section id="faqs" class="faqs section">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
+    <div class="container scroll_movement">
+      <h2>{{translate('faqs.title')}}</h2>
       <div class="faq-grid">
         @for (faq of faqs; track $index; let i = $index) {
             <div class="faq-item">
                 <div class="faq-question" (click)="toggleFaq(i)" [class.active]="faq.isOpen">
-                <h3>{{ faq.question }}</h3>
+                <h3>{{ translate(faq.question) }}</h3>
                 <span class="icon">{{ faq.isOpen ? '−' : '+' }}</span>
                 </div>
                 <div class="faq-answer" [class.active]="faq.isOpen">
-                <p>{{ faq.answer }}</p>
+                <p>{{ translate(faq.answer) }}</p>
                 </div>
             </div>
         }

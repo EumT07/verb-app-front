@@ -265,7 +265,6 @@ footer hr{
   .footer-section a:hover {
     color: var(--primary-color);
   }
-
   .contact > ul{
     display: flex;
     flex-direction: column;

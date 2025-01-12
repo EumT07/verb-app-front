@@ -13,6 +13,9 @@
     --border-box-shadow: #646262;
     --text-color-footer: #fff;
     --bg-footer: #2c2c2c;
+    --bg-verb-card: #1b263d;
+    --txt-verb-card: #fff;
+    --txt-ipa-verb-card: #ecc060;
     
 }
 
@@ -22,6 +25,9 @@
     --bg-color: #1f2937;
     --secondary-bg: #111827;
     --verb-text: #000;
+    --bg-verb-card: #fcfcfc;
+    --txt-verb-card: #000;
+    --txt-ipa-verb-card: rgb(108, 110, 112);
 }
 
 * {
@@ -398,6 +404,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
 .fa-spinner{
     font-size: 25px;
+    /* color: var(--verb-text); */
 }
 
 /*Verbs Card*/
@@ -405,7 +412,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     align-items: center;
     width: 240px;
     height: 180px;
-    background-color: #fcfcfc;
+    background-color: var(--bg-verb-card);
     border: 0.2px solid #e4dfdf ;
     border-radius: 20px;
     display: flex;
@@ -424,11 +431,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
 .verb_container > h3{
     font-size: 1.3rem;
-    color: var(--verb-text);
+    color: var(--txt-verb-card);
 }
 .verb_container .ipa {
     font-size: 1.2rem;
-    color: rgb(106, 108, 109);
+    /* color: rgb(127, 128, 129); */
+    color: var(--txt-ipa-verb-card);
 }
 .verb_container hr{
     width: 60%;

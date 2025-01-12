@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Route, RouterLink } from '@angular/router';
 import { Links } from "../../interfaces/links"
 import { TranslationService } from '../../services/translation.service';
@@ -14,7 +14,7 @@ import { LanguageSelectorComponent } from "../../components/language-selector/la
 export class FooterComponent {
   email:string = "verbsapp@gmail.com";
   address:string = "Anzoátegui - Venezuela";
-  phone:string = "+58 4248182793"
+  phone:string = "+58 4124015176"
   links: Links[] = [
     {name: "Home",route: '#home'},
     {name: "About",route: '#about'},
@@ -22,10 +22,7 @@ export class FooterComponent {
     {name: "FAQs",route: '#faqs'},
     {name: "Verbs",route: '/verbs'},
   ]
-
-  constructor(
-    private translationService: TranslationService
-  ){}
+  private readonly translationService = inject(TranslationService)
 
   translate(key: string): string {
     return this.translationService.translate(key);

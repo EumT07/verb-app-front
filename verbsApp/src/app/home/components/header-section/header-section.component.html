@@ -1,12 +1,12 @@
 <section id="home" class="hero section">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Master English Verbs</h1>
-        <p>Learn, practice, and perfect your English verb conjugations with our interactive platform, Feel free to browse through our +200 verbs</p>
-        <button [routerLink]="['/verbs']" class="cta-button">Start Learning Now</button>
+    <div class="container hero-content scroll_movement">
+      <div class="hero-text slide-in-left">
+        <h1>{{ translate('hero.title')}}</h1>
+        <p>{{translate('hero.subtitle')}}</p>
+        <button [routerLink]="['/verbs']" class="cta-button jello-horizontal">{{translate('hero.cta')}}</button>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800" 
+        <img class="slide-in-right" src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800" 
              alt="Students learning English"
              loading="lazy">
       </div>
