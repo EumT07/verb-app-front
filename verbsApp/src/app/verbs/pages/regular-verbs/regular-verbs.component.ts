@@ -8,6 +8,7 @@ import { regularVerbs } from '../../interface';
 import { RegularVerbComponent } from "../../components/regular-verb/regular-verb.component";
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
+import { ScreenService } from '../../../shared/services/screen.service';
 
 @Component({
   selector: 'app-regular-verbs',
@@ -18,18 +19,21 @@ import { Router } from '@angular/router';
 })
 export default class RegularVerbsComponent {
   verbs: regularVerbs[] = []
-  verb_loading: number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-  page: number = 1
-  limit: number = 30
+  verb_loading: number[] = [...Array(20).keys()].map((el) => el + 1)
+  page: number = 1;
+  limit: number = 0;
   totalPages: number = 1;
-  currentPage: number = 1
-  lastPage: number = 0
+  currentPage: number = 1;
+  lastPage: number = 0;
 
 
   private readonly verbService = inject(VerbsService)
   private readonly router = inject(Router)
+  private readonly screenWidth = inject(ScreenService)
+  
   
     ngOnInit(){
+      this.limit = this.screenWidth.screenSize();
         this.regularVerbs(this.page, this.limit)
     }
 

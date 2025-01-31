@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { Verbs } from '../../interface';
+import { Verbs, VerbByWord } from '../../interface';
 import { VerbModalComponent } from "../verb-modal/verb-modal.component";
 import { ModalServicesService } from '../../../shared/services/modal-services.service';
 
@@ -16,6 +16,7 @@ export class VerbComponent {
   verbId?: string;
   @Input() verbs: Verbs[] = []
   @Input() verb_loading: number[] = []
+  @Input() searchVerbList: VerbByWord[] = []
   private readonly modalEvent = inject(ModalServicesService)
   constructor(){
 

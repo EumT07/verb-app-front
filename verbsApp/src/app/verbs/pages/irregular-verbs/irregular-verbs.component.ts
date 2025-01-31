@@ -9,6 +9,7 @@ import { irregularVerbs } from '../../interface';
 import { IrregularVerbComponent } from "../../components/irregular-verb/irregular-verb.component";
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
+import { ScreenService } from '../../../shared/services/screen.service';
 
 @Component({
   selector: 'app-irregular-verbs',
@@ -21,18 +22,21 @@ export default class IrregularVerbsComponent {
   verbs: irregularVerbs[] = []
   verb_loading: number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
   totalPages = 1;
-  page: number = 1
-  limit: number = 30
-  currentPage: number = 1
-  lastPage: number = 0
+  page: number = 1;
+  limit: number = 30;
+  currentPage: number = 1;
+  lastPage: number = 0;
 
 
   private readonly verbService = inject(VerbsService)
   private readonly router = inject(Router)
+  private readonly screenWidth = inject(ScreenService)
+  
   
   ngOnInit(){
+    // this.limit = this.screenWidth.screenSize();
     this.irregularVerbs(this.page, this.limit)
-}
+  }
 
 irregularVerbs(page: number, limit: number){
   this.verbService.getIrregularVerbs({page, limit})

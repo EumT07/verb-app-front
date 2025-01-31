@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject} from '@angular/core';
+import { ScreenService } from '../../../shared/services/screen.service';
+import { VerbByWord } from '../../interface';
 
 
 @Component({
@@ -13,15 +15,16 @@ export class PaginationComponent {
   @Input() totalPages: number = 1
   @Input() currentPage?: number = 1
   pages: number[] = []
+  @Input() limit: number = 0
   @Output() nextPage = new EventEmitter<number>();
   @Output() previousPage = new EventEmitter<number>();
   @Output() pageSelected = new EventEmitter<number>();
+  value: number = 0;
   // @Output() upPage = new EventEmitter()
-
+  private readonly screenWidth = inject(ScreenService)
 
   ngOnInit(){
-    const pagesCount = Math.ceil( this.totalPages / 30);
-    this.pages = this.range(1, pagesCount);
+    this.OnResize()
   }
 
   range(start: number, end: number): number[] {
@@ -33,5 +36,19 @@ export class PaginationComponent {
         // Browser-specific code, like scrolling to the top
         window.scrollTo(0, 0);
     }
-}
+  }
+
+  OnResize(){
+      this.value = this.screenWidth.screenSize();
+      if( this.value == 60){
+        const pagesCount = Math.ceil( this.totalPages / this.limit);
+        this.pages = this.range(1, pagesCount);
+      }else{
+        const pagesCount = Math.ceil( this.totalPages / this.limit);
+        this.pages = this.range(1, pagesCount);
+    }
+
+  }
+
+  
 }

@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map} from 'rxjs';
 import { environment } from '../../../environment/environment.devolp';
-import { Pagination, VerbsResponse, RegularVerbsResponse, IrregularVerbsResponse, VerbById, VerbByName } from '../interfaces';
+import { Pagination, VerbsResponse, RegularVerbsResponse, IrregularVerbsResponse, VerbById, VerbByWord } from '../interfaces';
 
 
 @Injectable({
@@ -40,11 +40,11 @@ export class VerbsService {
     .pipe(map((response: Object) => response as VerbById))
   }
 
-  getVerbsByName(name: string){
-    const url = `${this.baseURL}/verbs/${name}`
+  getVerbsByWord(word: string, {page, limit}: Pagination){
+    const url = `${this.baseURL}/verbs/search/${word}?page=${page}&limit=${limit}`
     return this._http
     .get(url)
-    .pipe(map((response: Object) => response as VerbByName))
+    .pipe(map((response: Object) => response as VerbByWord))
   }
 
 

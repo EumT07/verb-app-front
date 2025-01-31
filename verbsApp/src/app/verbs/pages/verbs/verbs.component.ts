@@ -1,13 +1,14 @@
-import { Component, inject, } from '@angular/core';
+import { Component, inject, Output} from '@angular/core';
 import { HeaderComponent } from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
-import { Verbs } from '../../interface/index';
+import { Verbs, VerbByWord } from '../../interface/index';
 import { VerbComponent } from "../../components/verb/verb.component";
 import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
 import { VerbModalComponent } from "../../components/verb-modal/verb-modal.component";
+import { ScreenService } from '../../../shared/services/screen.service';
 
 
 @Component({
@@ -20,21 +21,25 @@ import { VerbModalComponent } from "../../components/verb-modal/verb-modal.compo
 export default class VerbsComponent {
 
     verbs: Verbs[] = []
-    verb_loading: number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    verb_loading: number[] = [...Array(20).keys()].map((el) => el + 1)
     page: number = 1
     currentPage: number = 1
     limit: number = 30
     totalPages = 1;
     lastPage: number = 0
+    searchVerbList: VerbByWord[] = []
 
     private readonly verbService = inject(VerbsService)
     private readonly router = inject(Router)
+    private readonly screenWidth = inject(ScreenService)
+  
   
     ngOnInit(){
-        this.getAllVerbs(this.page, this.limit)
+        this.limit = this.screenWidth.screenSize();
+        this.getAllVerbs(this.page, this.limit);
+
     }
-
-
+    
     getAllVerbs(page: number, limit: number){
         this.verbService.getAllVerbs({page, limit})
         // .subscribe(result => this.verbs = result.verbs)
@@ -42,7 +47,7 @@ export default class VerbsComponent {
             next: result => { 
                 this.verbs = result.verbs
                 this.totalPages = result.metaData.totalRegisters;
-                this.lastPage = result.metaData.lastPage
+                this.lastPage = result.metaData.lastPage;
             },
             error: e => {
                 this.router.navigate(["/error/server"])
@@ -69,6 +74,23 @@ export default class VerbsComponent {
     pageSelected(page:number){
         this.currentPage = page
         this.getAllVerbs(page, this.limit)
+    }
+
+    getVerbsSearched(word: string){ 
+        let page = this.page;
+        let limit = this.limit;        
+        if(word.length > 0){
+            this.verbService.getVerbsByWord(word,{page, limit})
+            .subscribe({
+                next: result => {
+                    this.searchVerbList = result.verbs
+                    this.totalPages = result.metaData.totalRegisters;
+                    this.lastPage = result.metaData.lastPage;
+                }
+            })
+        }else{
+            return this.getAllVerbs(page,limit)
+        }      
     }
 
 }

@@ -122,7 +122,7 @@ export class TranslationService {
   private languageSubject = new BehaviorSubject<string>(this.currentLang);
 
   language$ = this.languageSubject.asObservable();
-
+  
   getCurrentLang(): string {
     return this.currentLang;
   }

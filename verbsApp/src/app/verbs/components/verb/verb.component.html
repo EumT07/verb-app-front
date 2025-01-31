@@ -1,37 +1,67 @@
 @defer () {
-    @for (verb of  verbs; track $index) {
-        <div class="verb_container scroll_verb" (click)="openModal(verb.id)">
-            <h3>{{verb.infinitive}}</h3>
-            <hr>
-            @if (verb.IPA_regular_verbs !== null) {
-                <p class="ipa"> {{verb.IPA_regular_verbs?.ipa_present_us}}</p>
-            }@else {
-                <p class="ipa"> {{verb.IPA_irregular_verbs?.ipa_present_us}}</p>
-            }
-            <hr>
-            <div class="ipa_sound_container">
-                <div class="ico_container">
-                    <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
-                    <div>
-                        <i class="fa uk_ipa"></i>
+    @if (searchVerbList.length > 0) {
+        @for (verb of searchVerbList; track $index) {
+            <div class="verb_container scroll_verb" (click)="openModal(verb.id)">
+                <h3>{{verb.infinitive}}</h3>
+                <hr>
+                @if (verb.IPA_regular_verbs !== null) {
+                    <p class="ipa"> {{verb.IPA_regular_verbs?.ipa_present_us}}</p>
+                }@else {
+                    <p class="ipa"> {{verb.IPA_irregular_verbs?.ipa_present_us}}</p>
+                }
+                <hr class="line2">
+                <div class="ipa_sound_container">
+                    <div class="ico_container">
+                        <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                        <div>
+                            <i class="fa uk_ipa"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="ico_container">
-                    <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
-                    <div>
-                        <i class="fa uk_ipa"></i>
+                    <div class="ico_container">
+                        <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                        <div>
+                            <i class="fa uk_ipa"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
+    }@else {
+        @for (verb of  verbs; track $index) {
+            <div class="verb_container scroll_verb" (click)="openModal(verb.id)">
+                <h3>{{verb.infinitive}}</h3>
+                <hr>
+                @if (verb.IPA_regular_verbs !== null) {
+                    <p class="ipa"> {{verb.IPA_regular_verbs?.ipa_present_us}}</p>
+                }@else {
+                    <p class="ipa"> {{verb.IPA_irregular_verbs?.ipa_present_us}}</p>
+                }
+                <hr class="line2">
+                <div class="ipa_sound_container">
+                    <div class="ico_container">
+                        <img id="GB" src="https://flagsapi.com/GB/shiny/64.png" alt="UK">
+                        <div>
+                            <i class="fa uk_ipa"></i>
+                        </div>
+                    </div>
+                    <div class="ico_container">
+                        <img id="US" src="https://flagsapi.com/US/shiny/64.png" alt="USA">
+                        <div>
+                            <i class="fa uk_ipa"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
     }
+    
 } @placeholder (minimum 4s){
     @for (item of verb_loading; track $index) {
         <div class="loading_verbs">
             <h3 class="loading_info blink-2"></h3>
             <hr>
             <p class="loading_info blink-2"> </p>
-            <hr>
+            <hr class="line2">
             <div class="ipa_sound_container">
                 <div class="ico_container">
                     <p class="loading_info blink-2"></p>
