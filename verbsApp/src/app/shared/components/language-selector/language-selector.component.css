@@ -16,10 +16,10 @@
   }
 
   .flag-icon {
-    width: 30px;
-    height: 20px;
+    width: 40px;
+    height: 30px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 

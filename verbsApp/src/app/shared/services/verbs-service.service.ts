@@ -40,12 +40,24 @@ export class VerbsService {
     .pipe(map((response: Object) => response as VerbById))
   }
 
-  getVerbsByWord(word: string, {page, limit}: Pagination){
+  getAllVerbsBySearch(word: string, {page, limit}: Pagination){
     const url = `${this.baseURL}/verbs/search/${word}?page=${page}&limit=${limit}`
     return this._http
     .get(url)
     .pipe(map((response: Object) => response as VerbByWord))
   }
 
+  getRegularVerbsBySearch(word: string, {page, limit}: Pagination){
+    const url = `${this.baseURL}/verbs/search/regular/${word}?page=${page}&limit=${limit}`
+    return this._http
+    .get(url)
+    .pipe(map((response: Object) => response as VerbByWord))
+  }
+  getIrregularVerbsBySearch(word: string, {page, limit}: Pagination){
+    const url = `${this.baseURL}/verbs/search/irregular/${word}?page=${page}&limit=${limit}`
+    return this._http
+    .get(url)
+    .pipe(map((response: Object) => response as VerbByWord))
+  }
 
 }

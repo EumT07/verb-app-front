@@ -1,4 +1,4 @@
-import { Component, inject, Output} from '@angular/core';
+import { Component, inject,EventEmitter, Output} from '@angular/core';
 import { HeaderComponent } from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
 import { Verbs, VerbByWord } from '../../interface/index';
@@ -9,6 +9,7 @@ import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
 import { VerbModalComponent } from "../../components/verb-modal/verb-modal.component";
 import { ScreenService } from '../../../shared/services/screen.service';
+import { PaginationService } from '../../../shared/services/pagination.service';
 
 
 @Component({
@@ -27,17 +28,16 @@ export default class VerbsComponent {
     limit: number = 30
     totalPages = 1;
     lastPage: number = 0
-    searchVerbList: VerbByWord[] = []
 
     private readonly verbService = inject(VerbsService)
     private readonly router = inject(Router)
     private readonly screenWidth = inject(ScreenService)
+    // private readonly pagination = inject(PaginationService)
   
   
     ngOnInit(){
         this.limit = this.screenWidth.screenSize();
         this.getAllVerbs(this.page, this.limit);
-
     }
     
     getAllVerbs(page: number, limit: number){
@@ -48,6 +48,7 @@ export default class VerbsComponent {
                 this.verbs = result.verbs
                 this.totalPages = result.metaData.totalRegisters;
                 this.lastPage = result.metaData.lastPage;
+                // this.pagination.changeValues(result.metaData.totalRegisters,this.limit);
             },
             error: e => {
                 this.router.navigate(["/error/server"])
@@ -56,7 +57,7 @@ export default class VerbsComponent {
         })
     }
     
-    nextPage(){
+    nextPage(){        
         this.currentPage += 1
         if(this.currentPage >= this.lastPage){
             this.currentPage = this.lastPage;
@@ -80,17 +81,19 @@ export default class VerbsComponent {
         let page = this.page;
         let limit = this.limit;        
         if(word.length > 0){
-            this.verbService.getVerbsByWord(word,{page, limit})
+            this.verbService.getAllVerbsBySearch(word,{page, limit})
             .subscribe({
                 next: result => {
-                    this.searchVerbList = result.verbs
-                    this.totalPages = result.metaData.totalRegisters;
-                    this.lastPage = result.metaData.lastPage;
+                    this.verbs = result.verbs
+                    // this.totalPages = result.metaData.totalRegisters;
+                    // this.lastPage = result.metaData.lastPage;
+                    // this.pagination.changeValues(result.metaData.totalRegisters,this.limit)
                 }
             })
         }else{
             return this.getAllVerbs(page,limit)
-        }      
+        }     
     }
 
+    
 }

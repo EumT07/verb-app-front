@@ -9,6 +9,7 @@ import { RegularVerbComponent } from "../../components/regular-verb/regular-verb
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
 import { ScreenService } from '../../../shared/services/screen.service';
+import { PaginationService } from '../../../shared/services/pagination.service';
 
 @Component({
   selector: 'app-regular-verbs',
@@ -30,6 +31,7 @@ export default class RegularVerbsComponent {
   private readonly verbService = inject(VerbsService)
   private readonly router = inject(Router)
   private readonly screenWidth = inject(ScreenService)
+  // private readonly pagination = inject(PaginationService)
   
   
     ngOnInit(){
@@ -72,5 +74,23 @@ export default class RegularVerbsComponent {
     pageSelected(page:number){
         this.currentPage = page
         this.regularVerbs(page, this.limit)
+    }
+
+    getVerbsSearched(word: string){ 
+      let page = this.page;
+      let limit = this.limit;        
+      if(word.length > 0){
+          this.verbService.getRegularVerbsBySearch(word,{page, limit})
+          .subscribe({
+              next: result => {
+                  this.verbs = result.verbs
+                  // this.totalPages = result.metaData.totalRegisters;
+                  // this.lastPage = result.metaData.lastPage;
+                  // this.pagination.changeValues(result.metaData.totalRegisters,this.limit)
+              }
+          })
+      }else{
+          return this.regularVerbs(page,limit)
+      }     
     }
 }
