@@ -12,7 +12,7 @@ import { ModalServicesService } from '../../../shared/services/modal-services.se
   styleUrl: './verb.component.css'
 })
 export class VerbComponent {
-  modalActive?: boolean;
+  modalActive?: boolean = false;
   verbId?: string;
   @Input() verbs: Verbs[] = []
   @Input() verb_loading: number[] = []

@@ -1,8 +1,9 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input} from '@angular/core';
 import { ModalServicesService } from '../../../shared/services/modal-services.service';
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { VerbById } from '../../interface';
 import { AsyncPipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-verb-modal',
@@ -16,6 +17,8 @@ export class VerbModalComponent {
   verbDetail?: VerbById;
   private readonly modalEvent = inject(ModalServicesService)
   private readonly verb = inject(VerbsService)
+  isOpen: boolean = false;
+
 
   ngOnInit(): void{
     this.getVerbById(this.verb_id)
@@ -26,6 +29,10 @@ export class VerbModalComponent {
     this.modalEvent.$modal.emit(false)
   }
 
+  openVerbContainer(div:any){
+    (div as HTMLElement).classList.toggle("active")
+  }
+  
   getVerbById(id:string | undefined){
     this.verb.getVerbById(id)
       .subscribe({
@@ -38,5 +45,7 @@ export class VerbModalComponent {
         }
       })
   }
+
+
 
 }
