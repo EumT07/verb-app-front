@@ -9,12 +9,12 @@ export const routes: Routes = [
         path: "server",
         loadComponent: () => import('./pages/server-error/server-error.component')
     },
-    {
-        path: "session",
-        loadComponent: () => import('./pages/session-error/session-error.component')
-    },
-    {
-        path: 'token',
-        loadComponent: () => import('./pages/token-error/token-error.component')
-    }
+    // {
+    //     path: "session",
+    //     loadComponent: () => import('./pages/session-error/session-error.component')
+    // },
+    // {
+    //     path: 'token',
+    //     loadComponent: () => import('./pages/token-error/token-error.component')
+    // }
 ]

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';import { HeaderComponent,FooterComponent } from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
-import { Verbs } from '../../interface/verbs';
+import { Verbs } from '../../interface';
 import { VerbComponent } from "../../components/verb/verb.component";
 import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';

@@ -5,7 +5,7 @@
 </section>
 <section class="verbs">
         @if (verbs.length > 0) {
-            <app-regular-verb class="app_container" [verbs]="verbs" [verb_loading]="verb_loading"/>^
+            <app-regular-verb class="app_container" [verbs]="verbs" [verb_loading]="verb_loading"/>
             @defer () {
                 <app-pagination 
                 [totalPages]="totalPages"

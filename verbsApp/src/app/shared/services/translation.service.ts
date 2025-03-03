@@ -11,12 +11,12 @@ export class TranslationService {
 
   private translations: Translations = {
     en: {
-      'hero.title': 'Master English Verbs',
+      'hero.title': 'VerbsApp',
       'hero.subtitle': 'Learn, practice, and perfect your English verb conjugations with our interactive platform, Feel free to browse through our +200 verbs',
       'hero.cta': 'Start Learning Now',
-      'about.title': 'About VerbMaster',
+      'about.title': 'About VerbApp',
       'about.subtitle': 'Leading the new Way in Language Education',
-      'about.description': 'VerbMaster seeks to improve the correct pronunciation of verbs through IPA sounds. Our unique approach combines:',
+      'about.description': 'VerbsApp seeks to improve the correct pronunciation of verbs through IPA sounds. Our unique approach combines:',
       'about.feature1': 'Interactive learning experiences',
       'about.feature2': 'Better user interface',
       'about.feature3': 'Advanced AI technology',
@@ -46,12 +46,12 @@ export class TranslationService {
       'answer7': 'We are working on it, so it questions of time to include them in the page.'
     },
     es: {
-      'hero.title': 'Domina los Verbos en Inglés',
+      'hero.title': 'VerbsApp',
       'hero.subtitle': 'Aprende, practica y perfecciona tus conjugaciones de verbos en inglés con nuestra plataforma interactiva, siéntete libre de navegar a través de nuestros +200 verbos',
       'hero.cta': 'Comienza a Aprender',
-      'about.title': 'Sobre VerbMaster',
+      'about.title': 'Sobre VerbApp',
       'about.subtitle': 'Nuevos caminos en la enseñanza de idiomas',
-      'about.description': 'VerbMaster pretende mejorar la pronunciación correcta de los verbos a través de los sonidos IPA. Nuestro enfoque único combina:',
+      'about.description': 'VerbsApp pretende mejorar la pronunciación correcta de los verbos a través de los sonidos IPA. Nuestro enfoque único combina:',
       'about.feature1': 'Experiencias de aprendizaje interactivas',
       'about.feature2': 'Mejor interfaz de usuario',
       'about.feature3': 'Tecnología AI avanzada',
@@ -81,12 +81,12 @@ export class TranslationService {
       'answer7': 'Estamos trabajando en ello, así que cuestiones de tiempo para incluirlos en la página.'
     },
     pt: {
-      'hero.title': 'Domine os Verbos em Inglês',
+      'hero.title': 'VerbsApp',
       'hero.subtitle': 'Aprenda, pratique e aperfeiçoe suas conjugações verbais em inglês com nossa plataforma interativa. Fique à vontade para navegar por nossos mais de 200 verbos.',
       'hero.cta': 'Comece a Aprender',
-      'about.title': 'Sobre VerbMaster',
+      'about.title': 'Sobre VerbApp',
       'about.subtitle': 'Liderando o Caminho na Educação de Idiomas',
-      'about.description': 'O VerbMaster busca melhorar a pronúncia correta dos verbos por meio dos sons do IPA. Nossa abordagem exclusiva combina:',
+      'about.description': 'O VerbsApp busca melhorar a pronúncia correta dos verbos por meio dos sons do IPA. Nossa abordagem exclusiva combina:',
       'about.feature1': 'Experiências de aprendizado interativas',
       'about.feature2': 'Melhor interface de usuário',
       'about.feature3': 'Tecnologia AI avançada',

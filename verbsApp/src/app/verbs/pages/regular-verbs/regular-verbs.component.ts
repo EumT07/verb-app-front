@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { HeaderComponent,FooterComponent } from '../../../shared/layout';
+import { HeaderComponent} from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
 import { VerbComponent } from "../../components/verb/verb.component";
 import { ButtonsComponent } from "../../components/buttons/buttons.component";

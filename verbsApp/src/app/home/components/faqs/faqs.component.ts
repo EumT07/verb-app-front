@@ -16,11 +16,11 @@ export class FaqsComponent {
       answer: 'answer1',
       isOpen: false
     },
-    {
-      question: 'question2',
-      answer: 'answer3',
-      isOpen: false
-    },
+    // {
+    //   question: 'question2',
+    //   answer: 'answer2',
+    //   isOpen: false
+    // },
     {
       question: 'question3',
       answer: 'answer3',

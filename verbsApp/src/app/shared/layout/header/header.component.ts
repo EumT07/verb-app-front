@@ -48,8 +48,6 @@ export class HeaderComponent {
     if(typeof window !== 'undefined'){
       this.isDarkMode = this.darkModeValue.getDarkMode();
       document.documentElement.setAttribute('data-theme', this.isDarkMode ? 'dark' : 'light');
-      console.log("Valor Obtenid", this.isDarkMode);
-      
     }
     
   }

@@ -1,7 +1,7 @@
 import { Component, inject,EventEmitter, Output} from '@angular/core';
 import { HeaderComponent } from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
-import { Verbs, VerbByWord } from '../../interface/index';
+import { Verbs} from '../../interface';
 import { VerbComponent } from "../../components/verb/verb.component";
 import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';

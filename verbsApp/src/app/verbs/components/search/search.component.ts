@@ -1,7 +1,5 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { VerbsService } from '../../../shared/services/verbs-service.service';
-import { VerbByWord } from '../../interface/index';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-search',
