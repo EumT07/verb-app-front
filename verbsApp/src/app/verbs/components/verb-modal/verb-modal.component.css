@@ -118,11 +118,11 @@
   align-items: center;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
-  
 }
 
 .tense_container.active{
-  height: 40vh;
+  height: auto;
+  padding-bottom: 12px;
 }
 .tense_container > h3{
   align-self: baseline;
@@ -149,16 +149,18 @@
 }
 .ipa_verb_lng > div{
   background-color: rgba(203, 207, 206, 0.452);
-  width: 180px;
-  height: 60px;
+  width: auto;
+  height: 50px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 4px 10px;
 }
 .ipa_verb_lng div > .ipa_text{
   color: rgb(82, 84, 85);
+  margin-right: 8px;
 }
 
 .ipa_icon_container{
@@ -229,3 +231,27 @@
       opacity: 1;
     }
   }
+
+@media (max-width: 600px) {
+  .modal__content{
+    width: 100%;
+  }
+  .ipa_verb_container{
+    width: 90%;
+  }
+}
+@media (max-width: 530px) {
+  .ipa_verb_container{
+    flex-direction: column;
+    /* width: 80%; */
+    height: auto;
+  }
+}
+@media (max-width: 380px) {
+  .modal__content{
+    padding-right: 0px;
+  }
+  .close_icon_container{
+    right: 10px;
+  }
+}
