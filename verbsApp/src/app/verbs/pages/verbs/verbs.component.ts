@@ -1,7 +1,7 @@
 import { Component, inject,EventEmitter, Output} from '@angular/core';
 import { HeaderComponent } from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
-import { Verbs} from '../../interface';
+import { Verbs, SpecialVerbs} from '../../interface';
 import { VerbComponent } from "../../components/verb/verb.component";
 import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';
@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 import { VerbModalComponent } from "../../components/verb-modal/verb-modal.component";
 import { ScreenService } from '../../../shared/services/screen.service';
 import { PaginationService } from '../../../shared/services/pagination.service';
+import { VerbNotFoundComponent } from "../../../shared/layout/errors/pages/verb-not-found/verb-not-found.component";
 
 
 @Component({
     selector: 'app-verbs',
     standalone: true,
-    imports: [HeaderComponent, SearchComponent, VerbComponent, ButtonsComponent, PaginationComponent],
+    imports: [HeaderComponent, SearchComponent, VerbComponent, ButtonsComponent, PaginationComponent, VerbNotFoundComponent],
     templateUrl: './verbs.component.html',
     styleUrl: './verbs.component.css'
 })
@@ -28,6 +29,7 @@ export default class VerbsComponent {
     limit: number = 30
     totalPages = 1;
     lastPage: number = 0
+    specialVerbPresent: SpecialVerbs[] = [];
 
     private readonly verbService = inject(VerbsService)
     private readonly router = inject(Router)
@@ -48,6 +50,7 @@ export default class VerbsComponent {
                 this.verbs = result.verbs
                 this.totalPages = result.metaData.totalRegisters;
                 this.lastPage = result.metaData.lastPage;
+
                 // this.pagination.changeValues(result.metaData.totalRegisters,this.limit);
             },
             error: e => {

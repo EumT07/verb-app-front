@@ -11,11 +11,12 @@ import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
 import { ScreenService } from '../../../shared/services/screen.service';
 import { PaginationService } from '../../../shared/services/pagination.service';
+import { VerbNotFoundComponent } from "../../../shared/layout/errors/pages/verb-not-found/verb-not-found.component";
 
 @Component({
   selector: 'app-irregular-verbs',
   standalone: true,
-  imports: [HeaderComponent, SearchComponent, ButtonsComponent, PaginationComponent, IrregularVerbComponent],
+  imports: [HeaderComponent, SearchComponent, ButtonsComponent, PaginationComponent, IrregularVerbComponent, VerbNotFoundComponent],
   templateUrl: './irregular-verbs.component.html',
   styleUrl: './irregular-verbs.component.css'
 })

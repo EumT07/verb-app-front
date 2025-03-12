@@ -1,0 +1,16 @@
+.verb_not_found_container{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.verb_not_found_container > div {
+    width: 150px;
+    height: 140px;
+}
+.verb_not_found_container > div > img{
+    width: 100%;
+    height: 100%;
+}

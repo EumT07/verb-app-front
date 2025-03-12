@@ -7,7 +7,7 @@
                 @if (verb.IPA_regular_verbs !== null) {
                     <p class="ipa"> {{verb.IPA_regular_verbs?.ipa_present_us}}</p>
                 }@else {
-                    <p class="ipa"> {{verb.IPA_irregular_verbs?.ipa_present_us}}</p>
+                    <p class="ipa"> {{verb.IPA_irregular_verbs?.ipa_present_us | arrayTransform}}</p>
                 }
                 <hr class="line2">
                 <div class="ipa_sound_container">
@@ -34,7 +34,7 @@
                 @if (verb.IPA_regular_verbs !== null) {
                     <p class="ipa"> {{verb.IPA_regular_verbs?.ipa_present_us}}</p>
                 }@else {
-                    <p class="ipa"> {{verb.IPA_irregular_verbs?.ipa_present_us}}</p>
+                    <p class="ipa"> {{verb.IPA_irregular_verbs?.ipa_present_us | arrayTransform}}</p>
                 }
                 <hr class="line2">
                 <div class="ipa_sound_container">

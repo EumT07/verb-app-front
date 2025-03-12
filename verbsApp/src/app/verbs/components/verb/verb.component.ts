@@ -2,12 +2,13 @@ import { Component, inject, Input } from '@angular/core';
 import { Verbs, VerbByWord } from '../../interface';
 import { VerbModalComponent } from "../verb-modal/verb-modal.component";
 import { ModalServicesService } from '../../../shared/services/modal-services.service';
+import { ArrayTransformPipe } from "../../pipes/array-transform.pipe";
 
 
 @Component({
   selector: 'app-verb',
   standalone: true,
-  imports: [VerbModalComponent],
+  imports: [VerbModalComponent, ArrayTransformPipe],
   templateUrl: './verb.component.html',
   styleUrl: './verb.component.css'
 })

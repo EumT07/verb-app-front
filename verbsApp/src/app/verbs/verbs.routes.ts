@@ -12,6 +12,10 @@ export const routes: Routes = [
     {
         path: "irregular",
         loadComponent: () => import('./pages/irregular-verbs/irregular-verbs.component')
+    },
+    {
+        path: "phrasal-verbs",
+        loadComponent: () => import("./pages/phrasal-verbs/phrasal-verbs.component")
     }
 
 ]

@@ -4,7 +4,7 @@ import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { VerbById } from '../../interface';
 import { AsyncPipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
 import { style } from '@angular/animations';
-import { SpecialVerbs } from '../../interface/specialVerbs';
+import { SpecialVerbs } from '../../interface';
 
 @Component({
   selector: 'app-verb-modal',
