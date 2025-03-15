@@ -26,11 +26,11 @@ export class FaqsComponent {
       answer: 'answer3',
       isOpen: false
     },
-    {
-      question: 'question4',
-      answer: 'answer4',
-      isOpen: false
-    },
+    // {
+    //   question: 'question4',
+    //   answer: 'answer4',
+    //   isOpen: false
+    // },
     {
       question: 'question5',
       answer: 'answer5',

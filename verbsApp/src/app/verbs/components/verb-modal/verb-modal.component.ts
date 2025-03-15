@@ -2,8 +2,7 @@ import { Component, inject, Input} from '@angular/core';
 import { ModalServicesService } from '../../../shared/services/modal-services.service';
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { VerbById } from '../../interface';
-import { AsyncPipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
-import { style } from '@angular/animations';
+import { UpperCasePipe } from '@angular/common';
 import { SpecialVerbs } from '../../interface';
 
 @Component({
@@ -71,9 +70,6 @@ export class VerbModalComponent {
             const IPA_US_presentList = result.verb.IPA_irregular_verbs?.ipa_present_us.split(",");
             this.specialVerbPresent = this.arryDestrcuturing(presentList,IPA_UK_presentList,IPA_US_presentList);
           }
-          
-          
-          
         },
         error: e => {
           throw new Error(e.message);

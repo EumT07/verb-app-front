@@ -14,7 +14,7 @@ import { LanguageSelectorComponent } from "../../components/language-selector/la
 export class FooterComponent {
   email:string = "verbsapp@gmail.com";
   address:string = "Anzoátegui - Venezuela";
-  phone:string = "+58 4124015176"
+  // phone:string = "+58 4124015176"
   links: Links[] = [
     {name: "Home",route: '#home'},
     {name: "About",route: '#about'},

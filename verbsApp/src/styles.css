@@ -454,6 +454,10 @@ body {
 .verb_container hr{
     width: 60%;
 }
+.verb_container > p{
+    color: #fff;
+    align-self: center;
+}
 /* .about_verbs .verbs_container > div p{
     font-size: 1rem;
     text-align: left;

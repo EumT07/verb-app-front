@@ -7,7 +7,6 @@ import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';
 import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { Router } from '@angular/router';
-import { VerbModalComponent } from "../../components/verb-modal/verb-modal.component";
 import { ScreenService } from '../../../shared/services/screen.service';
 import { PaginationService } from '../../../shared/services/pagination.service';
 import { VerbNotFoundComponent } from "../../../shared/layout/errors/pages/verb-not-found/verb-not-found.component";
@@ -26,19 +25,19 @@ export default class VerbsComponent {
     verb_loading: number[] = [...Array(20).keys()].map((el) => el + 1)
     page: number = 1
     currentPage: number = 1
-    limit: number = 30
+    limit: number = 60
     totalPages = 1;
     lastPage: number = 0
     specialVerbPresent: SpecialVerbs[] = [];
 
     private readonly verbService = inject(VerbsService)
     private readonly router = inject(Router)
-    private readonly screenWidth = inject(ScreenService)
+    // private readonly screenWidth = inject(ScreenService)
     // private readonly pagination = inject(PaginationService)
   
   
     ngOnInit(){
-        this.limit = this.screenWidth.screenSize();
+        // this.limit = this.screenWidth.screenSize();
         this.getAllVerbs(this.page, this.limit);
     }
     

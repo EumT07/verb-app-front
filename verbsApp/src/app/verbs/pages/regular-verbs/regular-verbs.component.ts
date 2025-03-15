@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { HeaderComponent} from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
-import { VerbComponent } from "../../components/verb/verb.component";
 import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';
 import { regularVerbs } from '../../interface';
@@ -23,7 +22,7 @@ export default class RegularVerbsComponent {
   verbs: regularVerbs[] = []
   verb_loading: number[] = [...Array(20).keys()].map((el) => el + 1)
   page: number = 1;
-  limit: number = 0;
+  limit: number = 60;
   totalPages: number = 1;
   currentPage: number = 1;
   lastPage: number = 0;
@@ -31,12 +30,12 @@ export default class RegularVerbsComponent {
 
   private readonly verbService = inject(VerbsService)
   private readonly router = inject(Router)
-  private readonly screenWidth = inject(ScreenService)
+  // private readonly screenWidth = inject(ScreenService)
   // private readonly pagination = inject(PaginationService)
   
   
     ngOnInit(){
-      this.limit = this.screenWidth.screenSize();
+      // this.limit = this.screenWidth.screenSize();
         this.regularVerbs(this.page, this.limit)
     }
 

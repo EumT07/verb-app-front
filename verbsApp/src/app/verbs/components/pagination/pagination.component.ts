@@ -61,9 +61,9 @@ export class PaginationComponent {
 
   }
 
-  reload(){
-    console.log("Hooolaaa");
+  // reload(){
+  //   console.log("Hooolaaa");
     
-  }
+  // }
   
 }

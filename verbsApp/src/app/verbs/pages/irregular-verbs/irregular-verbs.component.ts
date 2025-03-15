@@ -1,8 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../../../shared/layout';
 import { SearchComponent } from "../../components/search/search.component";
-import { Verbs } from '../../interface/verbs';
-import { VerbComponent } from "../../components/verb/verb.component";
 import { ButtonsComponent } from "../../components/buttons/buttons.component";
 import { PaginationComponent } from '../../components/pagination/pagination.component';
 import { irregularVerbs } from '../../interface';
@@ -32,7 +30,7 @@ export default class IrregularVerbsComponent {
 
   private readonly verbService = inject(VerbsService)
   private readonly router = inject(Router)
-  private readonly screenWidth = inject(ScreenService)
+  // private readonly screenWidth = inject(ScreenService)
   // private readonly pagination = inject(PaginationService)
   
   
