@@ -150,6 +150,9 @@
   align-self: baseline;
   padding-left: 0.8rem;
 }
+.tense_container .exercise p {
+  align-items: center;
+}
 .ipa_verb_container {
   width: 80%;
   height: 15vh;

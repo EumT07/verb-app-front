@@ -13,11 +13,11 @@
                     <div class="translate">
                         <div>
                             <img id="GB" src="https://flagsapi.com/ES/shiny/64.png" alt="UK">
-                            <p><span>:</span> {{verbDetail?.meaning_spn}}</p>
+                            <p><span>:</span> {{AI_info?.translation?.spanish}}</p>
                         </div>
                         <div>
                             <img id="GB" src="https://flagsapi.com/BR/shiny/64.png" alt="UK">
-                            <p><span>:</span> Portuguese</p>
+                            <p><span>:</span> {{AI_info?.translation?.portuguese}}</p>
                         </div>
                     </div>
                 </div>
@@ -56,11 +56,9 @@
                                     }
                                     <h3>Example</h3>
                                     <div class="exercise">
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
+                                        @for (item of AI_info?.sentences?.present; track $index) {
+                                            <p>{{item}}</p>
+                                        }
                                     </div>
                                 }@else {
                                     <h4>{{verbDetail?.present}}</h4>
@@ -107,11 +105,9 @@
                                 </div>
                                 <h3>Example</h3>
                                 <div class="exercise">
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
+                                    @for (item of AI_info?.sentences?.present; track $index) {
+                                        <p>{{item}}</p>
+                                    }
                                 </div>
                                 }
                             </div>
@@ -148,11 +144,9 @@
                                     }
                                     <h3>Example</h3>
                                     <div class="exercise">
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
+                                        @for (item of AI_info?.sentences?.past; track $index) {
+                                            <p>{{item}}</p>
+                                        }
                                     </div>
                                 }@else {
                                     <h4>{{verbDetail?.past}}</h4>
@@ -202,11 +196,9 @@
                                     </div>
                                     <h3>Example</h3>
                                     <div class="exercise">
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
-                                        <p>Lorem ipsum dolor sit ame</p>
+                                        @for (item of AI_info?.sentences?.past; track $index) {
+                                            <p>{{item}}</p>
+                                        }
                                     </div>
                                 }
                             </div>
@@ -264,11 +256,9 @@
                                 </div>
                                 <h3>Example</h3>
                                 <div class="exercise">
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
+                                    @for (item of AI_info?.sentences?.past_Participle; track $index) {
+                                        <p>{{item}}</p>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -322,19 +312,17 @@
                                 </div>
                                 <h3>Example</h3>
                                 <div class="exercise">
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
-                                    <p>Lorem ipsum dolor sit ame</p>
+                                    @for (item of AI_info?.sentences?.present_Participle; track $index) {
+                                        <p>{{item}}</p>
+                                    }
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-            }@placeholder (minimum 2s) {
+            }@placeholder (minimum 25s) {
                 <div class="loading_icon_modal">
+                    <p>Wait few secons while all info get ready</p>
                     <i class="fas fa-spinner fa-spin"></i>
                 </div>
             }

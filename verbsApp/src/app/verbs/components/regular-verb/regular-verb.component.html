@@ -1,6 +1,6 @@
 @defer () {
     @for (verb of  verbs; track $index) {
-        <div class="verb_container scroll_verb" (click)="openModal(verb.verbs.id)">
+        <div class="verb_container scroll_verb" (click)="openModal(verb.verbs.id, verb.verbs.infinitive)">
             <h3>{{verb.verbs.infinitive}}</h3>
             <hr>
             <p class="ipa"> {{verb.verbs.IPA_regular_verbs?.ipa_present_us}}</p>
@@ -47,5 +47,5 @@
     }
 }
 @if (modalActive) {
-    <app-verb-modal [verb_id]="verbId"/>
+    <app-verb-modal [verb_id]="verbId" [verb_infinitive]="verb_infinitive"/>
 }

@@ -15,6 +15,7 @@ import { ArrayTransformPipe } from "../../pipes/array-transform.pipe";
 export class VerbComponent {
   modalActive?: boolean = false;
   verbId?: string;
+  verb_infinitive?: string;
   @Input() verbs: Verbs[] = []
   @Input() verb_loading: number[] = []
   private readonly modalEvent = inject(ModalServicesService)
@@ -26,9 +27,10 @@ export class VerbComponent {
     this.modalEvent.$modal.subscribe((value)=> this.modalActive = value)
   }
 
-  openModal(id:string){
+  openModal(id:string, verb: string){
     this.modalActive = true;
     this.verbId = id;
+    this.verb_infinitive = verb;
   }
 
 }

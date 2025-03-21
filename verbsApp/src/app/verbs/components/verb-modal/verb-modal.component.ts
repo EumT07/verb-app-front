@@ -4,6 +4,8 @@ import { VerbsService } from '../../../shared/services/verbs-service.service';
 import { VerbById } from '../../interface';
 import { UpperCasePipe } from '@angular/common';
 import { SpecialVerbs } from '../../interface';
+import { DeepseekAiService } from '../../../shared/services/deepseek-ai.service';
+import { AiInfo } from '../../../shared/interfaces';
 
 @Component({
   selector: 'app-verb-modal',
@@ -14,15 +16,19 @@ import { SpecialVerbs } from '../../interface';
 })
 export class VerbModalComponent {
   @Input() verb_id?: string;
+  @Input() verb_infinitive?: string;
   verbDetail?: VerbById;
   private readonly modalEvent = inject(ModalServicesService)
   private readonly verb = inject(VerbsService)
+  private readonly deepseekService = inject(DeepseekAiService)
   specialVerbPresent: SpecialVerbs[] = [];
   specialVerbPast: SpecialVerbs[] = [];
+  AI_info?: AiInfo;
 
 
   ngOnInit(): void{
     this.getVerbById(this.verb_id)
+    this.deepseekAIInfo(this.verb_infinitive);
     // this.getVerbById("V9-BE-4411")
   }
 
@@ -39,9 +45,7 @@ export class VerbModalComponent {
       .subscribe({
         next: result => {
           this.verbDetail = result.verb;
-          
           const verb = result.verb.infinitive.split(" ");
-
           //Destructuring special verb: Be
           if(verb[1].toLowerCase() === "be"){
             //present
@@ -90,4 +94,15 @@ export class VerbModalComponent {
     return new_list;
   }
 
+  deepseekAIInfo(verb : string | undefined){
+    this.deepseekService.getDeepseekData(verb)
+    .subscribe({
+      next: result => {
+        this.AI_info = result;
+      },
+      error: e => {
+        throw new Error(e.message);
+      }
+    })
+  }
 }

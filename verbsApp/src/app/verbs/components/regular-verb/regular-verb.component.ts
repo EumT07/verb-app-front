@@ -13,6 +13,7 @@ import { VerbModalComponent } from "../verb-modal/verb-modal.component";
 export class RegularVerbComponent {
   modalActive?: boolean;
   verbId?: string;
+  verb_infinitive?: string;
   @Input() verbs: regularVerbs[] = []
   @Input() verb_loading: number[] = []
   private readonly modalEvent = inject(ModalServicesService)
@@ -21,9 +22,9 @@ export class RegularVerbComponent {
     this.modalEvent.$modal.subscribe((value)=> this.modalActive = value)
   }
 
-  openModal(id:string){
+  openModal(id:string, verb: string){
     this.modalActive = true;
     this.verbId = id;
-    
+    this.verb_infinitive = verb
   }
 }
