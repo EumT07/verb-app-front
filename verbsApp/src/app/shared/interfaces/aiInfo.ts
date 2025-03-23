@@ -1,10 +1,5 @@
 export interface AiInfo {
     verb: string,
-    definition: string,
-    translation : {
-        spanish : string,
-        portuguese: string
-    },
     sentences : {
         present: string[],
         past: string[],

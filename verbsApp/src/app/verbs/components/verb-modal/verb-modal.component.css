@@ -64,15 +64,16 @@
 }
 .translate{
   padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content:first baseline;
-  align-items: first baseline;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
+  justify-content:baseline;
+  align-items: center;
 }
 .translate > div {
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content:first baseline;
   align-items: center;
 }
 .translate > div > img {
@@ -81,7 +82,7 @@
 }
 .translate > div > p span{
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-left: 5px;
 }
 .tense_content{

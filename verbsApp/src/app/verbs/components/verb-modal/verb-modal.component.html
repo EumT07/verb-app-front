@@ -13,17 +13,30 @@
                     <div class="translate">
                         <div>
                             <img id="GB" src="https://flagsapi.com/ES/shiny/64.png" alt="UK">
-                            <p><span>:</span> {{AI_info?.translation?.spanish}}</p>
+                            <p><span>:</span> {{verbDetail?.Meaning?.spanish | titlecase }}</p>
                         </div>
                         <div>
                             <img id="GB" src="https://flagsapi.com/BR/shiny/64.png" alt="UK">
-                            <p><span>:</span> {{AI_info?.translation?.portuguese}}</p>
+                            <p><span>:</span> {{verbDetail?.Meaning?.portuguese | titlecase}}</p>
+                        </div>
+                        <div>
+                            <img id="GB" src="https://flagsapi.com/IT/shiny/64.png" alt="UK">
+                            <p><span>:</span> {{verbDetail?.Meaning?.italian | titlecase}}</p>
+                        </div>
+                        <div>
+                            <img id="GB" src="https://flagsapi.com/FR/shiny/64.png" alt="UK">
+                            <p><span>:</span> {{verbDetail?.Meaning?.french | titlecase}}</p>
+                        </div>
+                        <div>
+                            <img id="GB" src="https://flagsapi.com/DE/shiny/64.png" alt="UK">
+                            <p><span>:</span> {{verbDetail?.Meaning?.german | titlecase}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="tense_content">
                     <h3>Verbs Tense</h3>
                     <div class="verbsTense_container">
+                        <!-- Present -->
                         <div>
                             <div class="tense_title" (click)="openVerbContainer(div1)">
                                 <h3>Present</h3>
@@ -112,6 +125,7 @@
                                 }
                             </div>
                         </div>
+                        <!-- Past -->
                         <div>
                             <div class="tense_title" (click)="openVerbContainer(div2)">
                                 <h3>Past</h3>
@@ -203,6 +217,7 @@
                                 }
                             </div>
                         </div>
+                        <!-- Past Participle -->
                         <div>
                             <div class="tense_title" (click)="openVerbContainer(div3)">
                                 <h3>Past Participle</h3>
@@ -262,6 +277,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Present PArticiple -->
                         <div>
                             <div class="tense_title" (click)="openVerbContainer(div4)">
                                 <h3>Present Participle</h3>
@@ -320,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-            }@placeholder (minimum 25s) {
+            }@placeholder (minimum 10s) {
                 <div class="loading_icon_modal">
                     <p>Wait few secons while all info get ready</p>
                     <i class="fas fa-spinner fa-spin"></i>

@@ -8,7 +8,13 @@ export interface VerbById {
     past_participle: string,
     present_participle: string,
     type: string,
-    meaning_spn: string,
+    Meaning?: {
+        spanish?: string,
+        portuguese?: string,
+        italian?: string,
+        french?: string,
+        german?: string
+    } | null,
     definition: string,
     IPA_regular_verbs?: {
         ipa_present_uk?: string ,

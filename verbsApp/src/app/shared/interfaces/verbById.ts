@@ -7,7 +7,13 @@ export  interface VerbById {
         past: string,
         past_participle: string,
         present_participle: string,
-        meaning_spn: string,
+        meaning: {
+            spanish: string,
+            portuguese: string,
+            italian: string,
+            french: string,
+            german: string
+        } | null,
         definition: string,
         type: string,
         RegularVerbs: {
