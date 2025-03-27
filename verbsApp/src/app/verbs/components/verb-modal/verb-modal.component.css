@@ -63,7 +63,7 @@
   color: var(--verb-text);
 }
 .translate{
-  padding-left: 20px;
+  /* padding-left: 20px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4px;
@@ -83,7 +83,6 @@
 .translate > div > p span{
   font-weight: bolder;
   font-size: 0.8rem;
-  margin-left: 5px;
 }
 .tense_content{
   margin-top: 15px;
@@ -91,6 +90,38 @@
   flex-direction: column;
   justify-content:flex-start;
   align-items: flex-start;
+}
+.tense_content_title{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+.tense_content_title div span{
+  color: #666363;
+}
+.verbs_tense_info{
+  width: 100%;
+  margin-top: 15px;
+}
+.verbs_tense_info > div{
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.verbs_tense_info > div:nth-child(1){
+  background-color: #A1D6B2;
+}
+.verbs_tense_info > div:nth-child(2){
+  background-color: #FF8080;
+}
+.verbs_tense_info > div:nth-child(3){
+  background-color: #BA90C6;
+}
+.verbs_tense_info > div:nth-child(4){
+  background-color: #6096B4;
 }
 .verbsTense_container{
   width: 100%;
@@ -110,18 +141,7 @@
   background-color: var(--primary-color);
   color: #ffffff;
 }
-/* .verbsTense_container > div:nth-child(1){
-  background-color: #A1D6B2;
-}
-.verbsTense_container > div:nth-child(2){
-  background-color: #FF8080;
-}
-.verbsTense_container > div:nth-child(3){
-  background-color: #BA90C6;
-}
-.verbsTense_container > div:nth-child(4){
-  background-color: #6096B4;
-} */
+
 
 .tense_title{
   padding: 0.8rem;
@@ -132,7 +152,17 @@
   cursor: pointer;
   border-radius: 10px;
 }
-
+.info_verb_tense{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #c2baba77;
+  color: #e9e3e3;
+  cursor: pointer;
+}
 .tense_container {
   height: 0vh;
   display: flex;
@@ -226,12 +256,27 @@
 }
 
 .slide-in-right {
-	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .jello-horizontal {
   -webkit-animation: jello-horizontal 0.9s both;
     animation: jello-horizontal 0.9s both;
+}
+
+.bounce-top {
+	-webkit-animation: bounce-top 1s both;
+	        animation: bounce-top 1s both;
+}
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.jello-horizontal {
+  -webkit-animation: jello-horizontal 0.9s both;
+          animation: jello-horizontal 0.9s both;
+          animation-delay: 2.3s;
 }
 @-webkit-keyframes slide-in-right {
     0% {
@@ -258,12 +303,210 @@
     }
   }
 
+/* bounce-top*/
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+/*slide-in-left*/
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* jello-horizontal */
+  
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
 @media (max-width: 600px) {
   .modal__content{
     width: 100%;
   }
   .ipa_verb_container{
     width: 90%;
+  }
+  .translate{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 530px) {
@@ -280,4 +523,9 @@
   .close_icon_container{
     right: 10px;
   }
+  .translate{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+

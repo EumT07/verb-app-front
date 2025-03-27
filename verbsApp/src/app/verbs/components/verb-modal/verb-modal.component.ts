@@ -1,11 +1,11 @@
 import { Component, inject, Input} from '@angular/core';
 import { ModalServicesService } from '../../../shared/services/modal-services.service';
 import { VerbsService } from '../../../shared/services/verbs-service.service';
-import { VerbById } from '../../interface';
+import { VerbById, SpecialVerbs} from '../../interface';
 import { UpperCasePipe, TitleCasePipe } from '@angular/common';
-import { SpecialVerbs } from '../../interface';
 import { DeepseekAiService } from '../../../shared/services/deepseek-ai.service';
 import { AiInfo } from '../../../shared/interfaces';
+
 
 @Component({
   selector: 'app-verb-modal',
@@ -24,6 +24,7 @@ export class VerbModalComponent {
   specialVerbPresent: SpecialVerbs[] = [];
   specialVerbPast: SpecialVerbs[] = [];
   AI_info?: AiInfo;
+  show_verbsTense: boolean = true;
 
 
   ngOnInit(): void{
@@ -104,5 +105,10 @@ export class VerbModalComponent {
         throw new Error(e.message);
       }
     })
+  }
+
+
+  showDiv(){
+    this.show_verbsTense = !this.show_verbsTense
   }
 }

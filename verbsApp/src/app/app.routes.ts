@@ -22,13 +22,13 @@ export const routes: Routes = [
             .then((r)=>r.routes)
     },
     {
-        path: 'error',
+        path: '',
         loadChildren: () => import('./shared/layout/errors/error.routes').then((r)=>r.routes)
     }
     ,
     {
         path: '**',
-        redirectTo: '/error/pagenotfound',
+        redirectTo: '/pagenotfound',
         pathMatch: 'full'
     }
 ];

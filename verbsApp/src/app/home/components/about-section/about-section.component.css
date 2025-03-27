@@ -1,13 +1,19 @@
 .about {
     background-color: var(--secondary-bg);
-    height: 80vh;
+    height: auto;
+    padding: 2rem 0;
+  } 
+  .about > div {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 0 1rem;
   }
-
   .about h2 {
     text-align: center;
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .about-content {
@@ -24,7 +30,7 @@
   .about-image img {
     width: 100%;
     border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
   }
 
   .about-text h3 {

@@ -6,7 +6,7 @@ import { DarkModeLocalstorageService } from '../../services/dark-mode-localstora
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -21,22 +21,22 @@ export class HeaderComponent {
 
   isDarkMode = false;
   isMenuOpen = false;
-  private readonly darkModeValue = inject(DarkModeLocalstorageService)
+  // private readonly darkModeValue = inject(DarkModeLocalstorageService)
 
   constructor(){
-    this.checkDarkLocalStorage();
+    // this.checkDarkLocalStorage();
   }
 
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
 
-    if(this.isDarkMode){
-      this.darkModeValue.setdarkMode(this.isDarkMode);
-    }else{
-      this.darkModeValue.setdarkMode(this.isDarkMode);
-    }
+    // if(this.isDarkMode){
+    //   this.darkModeValue.setdarkMode(this.isDarkMode);
+    // }else{
+    //   this.darkModeValue.setdarkMode(this.isDarkMode);
+    // }
 
-    document.documentElement.setAttribute('data-theme', this.isDarkMode ? 'dark' : 'light');
+    // document.documentElement.setAttribute('data-theme', this.isDarkMode ? 'dark' : 'light');
   
   }
 
@@ -44,12 +44,12 @@ export class HeaderComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  checkDarkLocalStorage() {
-    if(typeof window !== 'undefined'){
-      this.isDarkMode = this.darkModeValue.getDarkMode();
-      document.documentElement.setAttribute('data-theme', this.isDarkMode ? 'dark' : 'light');
-    }
+  // checkDarkLocalStorage() {
+  //   if(typeof window !== 'undefined'){
+  //     this.isDarkMode = this.darkModeValue.getDarkMode();
+  //     document.documentElement.setAttribute('data-theme', this.isDarkMode ? 'dark' : 'light');
+  //   }
     
-  }
+  // }
 
 }

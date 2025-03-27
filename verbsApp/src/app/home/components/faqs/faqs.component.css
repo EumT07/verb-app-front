@@ -1,7 +1,11 @@
 .faqs {
     background-color: var(--secondary-bg);
+    padding: 4rem 0;
   }
-
+  .faqs > div {
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
   .faqs h2 {
     text-align: center;
     font-size: 2.5rem;

@@ -11,12 +11,12 @@ export class TranslationService {
 
   private translations: Translations = {
     en: {
-      'hero.title': 'VerbsApp',
+      'hero.title': 'Capybara English',
       'hero.subtitle': 'Learn, practice, and perfect your English verb conjugations with our interactive platform, Feel free to browse through our +200 verbs',
       'hero.cta': 'Start Learning Now',
-      'about.title': 'About VerbApp',
+      'about.title': 'About CapybaraEnglish',
       'about.subtitle': 'Leading the new Way in Language Education',
-      'about.description': 'VerbsApp seeks to improve the correct pronunciation of verbs through IPA sounds. Our unique approach combines:',
+      'about.description': 'CapybaraEnglish seeks to improve the correct pronunciation of verbs through IPA sounds. Our unique approach combines:',
       'about.feature1': 'Interactive learning experiences',
       'about.feature2': 'Better user interface',
       'about.feature3': 'Advanced AI technology',
@@ -34,7 +34,7 @@ export class TranslationService {
       'question2': 'Do you offer personalized learning plans?',
       'question3': 'Can I access the platform on mobile devices?',
       'question4': 'Are there native speakers available for practice?',
-      'question5': 'Is VerbsApp free?',
+      'question5': 'Is Capybara English free?',
       'question6': 'How many verbs are there in this website?',
       'question7': 'When are you going to include phrasal verbs?',
       'answer1': 'The learning process varies for each individual, but with consistent practice using our platform, most students see significant improvement within 2-3 months.',
@@ -46,12 +46,12 @@ export class TranslationService {
       'answer7': 'We are working on it, so it questions of time to include them in the page.'
     },
     es: {
-      'hero.title': 'VerbsApp',
+      'hero.title': 'Capybara English',
       'hero.subtitle': 'Aprende, practica y perfecciona tus conjugaciones de verbos en inglés con nuestra plataforma interactiva, siéntete libre de navegar a través de nuestros +200 verbos',
       'hero.cta': 'Comienza a Aprender',
-      'about.title': 'Sobre VerbApp',
+      'about.title': 'Sobre CapybaraEnglish',
       'about.subtitle': 'Nuevos caminos en la enseñanza de idiomas',
-      'about.description': 'VerbsApp pretende mejorar la pronunciación correcta de los verbos a través de los sonidos IPA. Nuestro enfoque único combina:',
+      'about.description': 'CapybaraEnglish pretende mejorar la pronunciación correcta de los verbos a través de los sonidos IPA. Nuestro enfoque único combina:',
       'about.feature1': 'Experiencias de aprendizaje interactivas',
       'about.feature2': 'Mejor interfaz de usuario',
       'about.feature3': 'Tecnología AI avanzada',
@@ -69,7 +69,7 @@ export class TranslationService {
       'question2': '¿Ofrecen planes de aprendizaje personalizados?',
       'question3': '¿Puedo acceder a la plataforma desde dispositivos móviles?',
       'question4': '¿Hay hablantes nativos disponibles para practicar?',
-      'question5': '¿VerbsApp es gratuito?',
+      'question5': '¿Capybara English es gratuito?',
       'question6': '¿Cuántos verbos hay en este sitio web?',
       'question7': '¿Cuándo incluirán los phrasal verbs?',
       'answer1': 'El proceso de aprendizaje varía en función de cada persona, pero con una práctica constante utilizando nuestra plataforma, la mayoría de los estudiantes observan una mejora significativa en 2-3 meses.',
@@ -81,12 +81,12 @@ export class TranslationService {
       'answer7': 'Estamos trabajando en ello, así que cuestiones de tiempo para incluirlos en la página.'
     },
     pt: {
-      'hero.title': 'VerbsApp',
+      'hero.title': 'CapybaraEnglish',
       'hero.subtitle': 'Aprenda, pratique e aperfeiçoe suas conjugações verbais em inglês com nossa plataforma interativa. Fique à vontade para navegar por nossos mais de 200 verbos.',
       'hero.cta': 'Comece a Aprender',
-      'about.title': 'Sobre VerbApp',
+      'about.title': 'Sobre CapybaraEnglish',
       'about.subtitle': 'Liderando o Caminho na Educação de Idiomas',
-      'about.description': 'O VerbsApp busca melhorar a pronúncia correta dos verbos por meio dos sons do IPA. Nossa abordagem exclusiva combina:',
+      'about.description': 'O CapybaraEnglish busca melhorar a pronúncia correta dos verbos por meio dos sons do IPA. Nossa abordagem exclusiva combina:',
       'about.feature1': 'Experiências de aprendizado interativas',
       'about.feature2': 'Melhor interface de usuário',
       'about.feature3': 'Tecnologia AI avançada',
@@ -104,7 +104,7 @@ export class TranslationService {
       'question2': 'Vocês oferecem planos de aprendizado personalizados?',
       'question3': 'Posso acessar a plataforma em dispositivos móveis?',
       'question4': 'Há falantes nativos disponíveis para praticar?',
-      'question5': 'O VerbsApp é gratuito?',
+      'question5': 'O Capybara English é gratuito?',
       'question6': 'Quantos verbos existem neste site?',
       'question7': 'Quando vocês vão incluir os phrasal verbs?',
       'answer1': 'O processo de aprendizado varia de acordo com cada indivíduo, mas com a prática consistente usando nossa plataforma, a maioria dos alunos percebe uma melhora significativa dentro de 2 a 3 meses.',
@@ -113,7 +113,7 @@ export class TranslationService {
       'answer4': 'Sim, temos uma equipe de professores de inglês nativos certificados disponíveis para sessões de prática ao vivo e orientação de pronúncia.',
       'answer5': 'No momento, este site é totalmente gratuito, você pode usá-lo, mas os recursos serão limitados, pois todos os processos (hospedagem, DNS, dados em nuvem) que ajudam esta página a funcionar corretamente são caros, portanto, ele pode funcionar ou não. Portanto, se você gostar deste projeto e quiser nos apoiar, pode nos comprar um café, pois esse apoio será usado para ajudar este projeto a crescer.',
       'answer6': 'No momento, temos cerca de 366 verbos, incluindo verbos regulares e irregulares, mas estamos trabalhando duro para incluir mais verbos.',
-      'answer7': 'No momento, temos cerca de 366 verbos, incluindo verbos regulares e irregulares, e estamos nos esforçando para incluir mais verbos.'
+      'answer7': 'Estamos trabalhando nisso, portanto, o tempo é essencial para colocá-los no site.'
 
     }
   };
