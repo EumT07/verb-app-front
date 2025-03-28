@@ -18,12 +18,18 @@
             <li class="links">
                 <a href="{{route.route}}">{{route.name}}</a>
             </li>
+            
         }
+        <a class="bugs_container" [routerLink]="['/bugs']">
+          <i class="fas fa-bug"></i>Bugs
+        </a>
+       
         <!-- <li>
           <button class="theme-toggle" (click)="toggleTheme()">
             {{ isDarkMode ? '🌞' : '🌙' }}
           </button>
         </li> -->
-    </div>
+      </div>
+    
     </nav>
   </header>

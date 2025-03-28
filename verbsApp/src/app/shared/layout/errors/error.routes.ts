@@ -9,6 +9,10 @@ export const routes: Routes = [
         path: "server",
         loadComponent: () => import('./pages/server-error/server-error.component')
     },
+    {
+        path: "bugs",
+        loadComponent: () => import('./pages/bugs/bugs.component')
+    }
     // {
     //     path: "session",
     //     loadComponent: () => import('./pages/session-error/session-error.component')
