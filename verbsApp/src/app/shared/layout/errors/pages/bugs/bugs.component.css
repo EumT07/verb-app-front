@@ -1,5 +1,5 @@
   .bugs {
-    max-width: 100vw; 
+    width: 100vw; 
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -8,14 +8,12 @@
   }
 
   .bugs-content {
-    /* max-width: 1200px; */
-    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 5%;
   }
   .bugs-content > div{
     display: flex;
@@ -45,20 +43,20 @@
 
   .bugs-image {
     align-self: center;
-    width: 400px;
-    height: 480px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .bugs-image img {
-    max-width: 80%;
-    height: 80%;
+    max-width: 100%;
+    height: auto;
     border-radius: 1rem;
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
   }
   .buttons {
-    width: 60%;
+    max-width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -211,6 +209,13 @@
 }
 
 @media (max-width: 960px) {
+    .house_ico{
+      top: 40px;
+      left: 40px;
+    }
+    .bugs{
+      padding: auto;
+    }
     .bugs-content {
       grid-template-columns: 1fr;
       text-align: center;
@@ -223,18 +228,21 @@
       font-size: 2.5rem;
     }
     .bugs-image{
-      width: 300px;
-      height: 400px;
+      width: 80%;
+      max-width: none;
     }
     .buttons{
-      width: 40%;
+      width: 80%;
     }
   }
 
-  @media (max-width: 360px) {
+@media (max-width: 360px) {
+    .house_ico{
+      top: 20px;
+      left: 20px;
+    }
     .bugs{
       padding: 1rem 0;
-      height: auto;
     }
     .bugs-content{
       padding: 1rem;
