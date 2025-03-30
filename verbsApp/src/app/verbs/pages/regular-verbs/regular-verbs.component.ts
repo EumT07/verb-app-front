@@ -49,9 +49,8 @@ export default class RegularVerbsComponent {
             this.lastPage = result.metaData.lastPage;
           },
           error: e => {
-              console.log(e.message);
-              this.router.navigate(["/error/server"])
-              throw new Error(e.message);
+              return this.router.navigate(["/server"])
+              // throw new Error(e.message);
           }
       })
     }
@@ -87,6 +86,10 @@ export default class RegularVerbsComponent {
                   // this.totalPages = result.metaData.totalRegisters;
                   // this.lastPage = result.metaData.lastPage;
                   // this.pagination.changeValues(result.metaData.totalRegisters,this.limit)
+              },
+              error: e => {
+                  console.log(e.message);
+                  return this.router.navigate(["/server"]);
               }
           })
       }else{

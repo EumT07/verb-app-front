@@ -17,10 +17,11 @@ export class FooterComponent {
   // phone:string = "+58 4124015176"
   links: Links[] = [
     {name: "Home",route: '#home'},
-    {name: "About",route: '#about'},
-    {name: "Team",route: '#team'},
-    {name: "FAQs",route: '#faqs'},
+    // {name: "About",route: '#about'},
+    // {name: "Team",route: '#team'},
+    // {name: "FAQs",route: '#faqs'},
     {name: "Verbs",route: '/verbs'},
+    {name: "Bugs",route: '/bugs'},
   ]
   private readonly translationService = inject(TranslationService)
 

@@ -38,7 +38,7 @@ export default class VerbsComponent {
   
     ngOnInit(){
         // this.limit = this.screenWidth.screenSize();
-        this.getAllVerbs(this.page, this.limit);
+        this.getAllVerbs(this.page, this.limit);        
     }
     
     getAllVerbs(page: number, limit: number){
@@ -49,12 +49,11 @@ export default class VerbsComponent {
                 this.verbs = result.verbs
                 this.totalPages = result.metaData.totalRegisters;
                 this.lastPage = result.metaData.lastPage;
-
                 // this.pagination.changeValues(result.metaData.totalRegisters,this.limit);
             },
             error: e => {
-                this.router.navigate(["/error/server"])
-                throw new Error(e.message);
+                console.log(e.message);
+                return this.router.navigate(["/server"]);
             }
         })
     }
@@ -79,7 +78,7 @@ export default class VerbsComponent {
         this.getAllVerbs(page, this.limit)
     }
 
-    getVerbsSearched(word: string){ 
+    getVerbsSearched(word: string){
         let page = this.page;
         let limit = this.limit;        
         if(word.length > 0){
@@ -90,6 +89,9 @@ export default class VerbsComponent {
                     // this.totalPages = result.metaData.totalRegisters;
                     // this.lastPage = result.metaData.lastPage;
                     // this.pagination.changeValues(result.metaData.totalRegisters,this.limit)
+                },error: e => {
+                    console.log(e.message);
+                    return this.router.navigate(["/server"]);
                 }
             })
         }else{

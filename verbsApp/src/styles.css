@@ -11,33 +11,25 @@
     --header-height: 4rem;
     --border-box: #a19d9d;
     --border-box-shadow: #646262;
+    /*Footer*/
     --footer-text: #fff;
     --footer-bg: #2c2c2c;
     --bg-verb-card: #1b263d;
     --txt-verb-card: #fff;
     --txt-ipa-verb-card: #ecc060;
     --transition-speed: 0.3s;
-    --footer-spacing: 1rem;
-    --footer-section-gap: 1.5rem;
-    --footer-max-width: 1200px;
-    --error-bg: transparent;
-    --error-text: inherit;
-    --error-primary: var(--primary-color);
+    --transparent-bg: transparent;
+    --inherit-text: inherit;
+    /*Errors*/
     --error-code-color: #333;
     --error-highlight-color: #d32f2f;
-    --error-spacing: 1rem;
-    --hero-bg: transparent;
-    --hero-text-color: inherit;
-    --hero-primary: var(--primary-color);
-    --hero-spacing: 2rem;
     --hero-max-width: 1200px;
     --hero-min-height: calc(100vh - var(--header-height));
+    /*About*/
     --about-bg: var(--secondary-bg);
     --about-text: var(--text-color);
-    --about-primary: var(--primary-color);
-    --about-spacing: 2rem;
-    --about-max-width: 1200px;
     --about-gap: clamp(2rem, 4vw, 4rem);
+    /*FAQs*/
     --faq-bg: var(--secondary-bg);
     --faq-text: inherit;
     --faq-primary: var(--primary-color);
@@ -47,12 +39,8 @@
     --faq-max-width: 800px;
     --faq-radius: 1rem;
     --faq-transition: all 0.3s ease-out;
+    /*Teams*/
     --team-bg: var(--bg-color);
-    --team-text: var(--text-color);
-    --team-primary: var(--primary-color);
-    --team-spacing: 3rem;
-    --team-max-width: 1200px;
-    --team-card-width: 300px;
     --team-social-bg: rgba(0, 0, 0, 0.7);
     --team-transition: all 0.3s ease;
 }
@@ -72,7 +60,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    /* outline: 1px solid red; */
 }
 body {
     font-family: 'Poppins', sans-serif;
@@ -80,17 +69,6 @@ body {
     background-color: var(--bg-color);
     transition: background-color 0.3s, color 0.3s;
 }
-
-/* .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.section {
-    padding: 5rem 0;
-} */
 
 @media (max-width: 768px) {
     .section {
@@ -105,9 +83,9 @@ body {
     inset: 0;
     display: grid;
     place-items: center;
-    background-color: var(--error-bg);
-    color: var(--error-text);
-    padding: var(--error-spacing);
+    background-color: var(--transparent-bg);
+    color: var(--inherit-text);
+    padding: 1rem;
     text-align: center;
   }
   
@@ -115,7 +93,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--error-spacing);
+    gap: 1rem;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -135,7 +113,7 @@ body {
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: var(--error-code-color);
-    margin: calc(var(--error-spacing) * 0.5) 0;
+    margin: calc(1rem * 0.5) 0;
   }
   
   .digit {
@@ -143,14 +121,14 @@ body {
   }
   
   .digit-0 {
-    color: var(--error-primary);
+    color: var(--primary-color);
     transform: scale(1.1);
   }
   
   .error-content {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--error-spacing) * 0.5);
+    gap: calc(1rem * 0.5);
   }
   
   .error-title {
@@ -173,7 +151,7 @@ body {
   .error-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: var(--error-primary);
+    background-color: var(--primary-color);
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -181,7 +159,7 @@ body {
     transition: 
       background-color 0.3s ease,
       transform 0.2s ease;
-    margin-top: var(--error-spacing);
+    margin-top: 1rem;
   }
   
   .error-button:hover,

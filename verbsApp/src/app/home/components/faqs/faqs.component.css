@@ -78,8 +78,8 @@
   } */
 
   .faq-section {
-    background-color: var(--faq-bg);
-    padding: var(--faq-spacing) 0;
+    background-color: var(--secondary-bg);
+    padding: 2rem 0;
     width: 100%;
   }
   
@@ -93,7 +93,7 @@
   .faq-title {
     text-align: center;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
-    color: var(--faq-primary);
+    color: var(--primary-color);
     margin-bottom: clamp(1.5rem, 4vw, 3rem);
     line-height: 1.2;
   }
@@ -108,7 +108,7 @@
   /* Tarjeta FAQ */
   .faq-card {
     border: 1px solid var(--faq-border);
-    border-radius: var(--faq-radius);
+    border-radius: 1rem;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
   }
@@ -124,7 +124,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--faq-bg);
+    background-color: var(--secondary-bg);
     border: none;
     cursor: pointer;
     text-align: left;
@@ -135,13 +135,13 @@
     font-size: clamp(1rem, 2vw, 1.1rem);
     margin: 0;
     font-weight: 600;
-    color: var(--faq-text);
+    color: var(--inherit-text);
     flex: 1;
   }
   
   .faq-icon {
     font-size: 1.5rem;
-    color: var(--faq-primary);
+    color: var(--primary-color);
     font-weight: bold;
     transition: transform 0.3s ease;
     flex-shrink: 0;
@@ -173,7 +173,7 @@
   
   /* Focus styles para accesibilidad */
   .faq-header:focus-visible {
-    outline: 2px solid var(--faq-primary);
+    outline: 2px solid var(--primary-color);
     outline-offset: 2px;
   }
   

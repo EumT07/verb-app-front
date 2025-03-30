@@ -18,11 +18,7 @@ export class VerbComponent {
   verb_infinitive?: string;
   @Input() verbs: Verbs[] = []
   @Input() verb_loading: number[] = []
-  private readonly modalEvent = inject(ModalServicesService)
-  constructor(){
-
-  }
-
+  private readonly modalEvent = inject(ModalServicesService);
   ngOnInit(){
     this.modalEvent.$modal.subscribe((value)=> this.modalActive = value)
   }

@@ -1,13 +1,13 @@
   /* Estructura base */
 .team-section {
-  background-color: var(--team-bg);
-  padding: var(--team-spacing) 0;
+  background-color: var(--bg-color);
+  padding: 3rem 0;
   width: 100%;
 }
 
 .team-container {
   width: 100%;
-  max-width: var(--team-max-width);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -15,7 +15,7 @@
 .team-title {
   text-align: center;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
-  color: var(--team-primary);
+  color: var(--primary-color);
   margin-bottom: clamp(1.5rem, 4vw, 3rem);
   line-height: 1.2;
 }
@@ -33,7 +33,7 @@
 /* Tarjeta de miembro */
 .team-card {
   width: 100%;
-  max-width: var(--team-card-width);
+  max-width: 300px;
   text-align: center;
 }
 
@@ -42,8 +42,8 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  width: var(--team-card-width);
-  height: var(--team-card-width);
+  width: 300px;
+  height: 300px;
 }
 
 .team-card__image {
@@ -81,13 +81,13 @@
 
 .team-card__name {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: var(--team-text);
+  color: var(--text-color);
   margin: 0 0 0.5rem;
   line-height: 1.3;
 }
 
 .team-card__role {
-  color: var(--team-text);
+  color: var(--text-color);
   opacity: 0.8;
   margin: 0;
   line-height: 1.5;

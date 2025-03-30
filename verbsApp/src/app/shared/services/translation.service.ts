@@ -37,13 +37,15 @@ export class TranslationService {
       'question5': 'Is Capybara English free?',
       'question6': 'How many verbs are there in this website?',
       'question7': 'When are you going to include phrasal verbs?',
+      'question8': 'What about ipa sounds?',
       'answer1': 'The learning process varies for each individual, but with consistent practice using our platform, most students see significant improvement within 2-3 months.',
       'answer2': 'Yes! Our AI-powered system creates a customized learning path based on your current level, goals, and learning style.',
       'answer3': 'Absolutely! Our platform is fully responsive and works seamlessly on smartphones, tablets, and desktop computers.',
       'answer4': 'Yes, we have a team of certified native English teachers available for live practice sessions and pronunciation guidance.',
       'answer5': 'For the moment this website is completely free, you can use it, but the resources will be limited because all processes (Hosting, DNS, cloud data) that help this page works correctly are expensive so it could work or not, so if you like this project and want to support us you can buy us a coffe, this support will be use for help this project to grow up.',
       'answer6': 'For the moment we have around 366 verbs including Regular and Irregular Verbs, we are working very hard to include more verbs.',
-      'answer7': 'We are working on it, so it questions of time to include them in the page.'
+      'answer7': 'We are working on it, so it questions of time to include them in the page.',
+      'answer8': 'At the moment we have been working very hard to implement ipa sounds so that users can hear the best way to pronounce each verb on the website, so sooner or later the website will have the service up and running.'
     },
     es: {
       'hero.title': 'Capybara English',
@@ -72,13 +74,15 @@ export class TranslationService {
       'question5': '¿Capybara English es gratuito?',
       'question6': '¿Cuántos verbos hay en este sitio web?',
       'question7': '¿Cuándo incluirán los phrasal verbs?',
+      'question8': '¿Y los sonidos IPA?',
       'answer1': 'El proceso de aprendizaje varía en función de cada persona, pero con una práctica constante utilizando nuestra plataforma, la mayoría de los estudiantes observan una mejora significativa en 2-3 meses.',
       'answer2': 'Sí. Nuestro sistema basado en IA crea una ruta de aprendizaje personalizada en función de tu nivel actual, tus objetivos y tu estilo de aprendizaje.',
       'answer3': 'Por supuesto. Nuestra plataforma es totalmente responsive y funciona a la perfección en smartphones, tablets y ordenadores de sobremesa.',
       'answer4': 'Sí, contamos con un equipo de profesores nativos de inglés certificados disponibles para sesiones de práctica en directo y orientación sobre pronunciación.',
       'answer5': 'De momento esta web es completamente gratuita, puedes usarla, pero los recursos serán limitados ya que todos los procesos (Hosting, DNS, datos en la nube) que ayudan a que esta página funcione correctamente son caros por lo que podría funcionar o no, así que si te gusta este proyecto y quieres apoyarnos puedes invitarnos a un café, este apoyo servirá para ayudar a que este proyecto crezca.',
       'answer6': 'Por el momento tenemos alrededor de 366 verbos incluyendo Verbos Regulares e Irregulares, estamos trabajando muy duro para incluir más verbos.',
-      'answer7': 'Estamos trabajando en ello, así que cuestiones de tiempo para incluirlos en la página.'
+      'answer7': 'Estamos trabajando en ello, así que cuestiones de tiempo para incluirlos en la página.',
+      'answer8': 'De momento hemos estado trabajando muy duro para implementar sonidos ipa para que los usuarios puedan escuchar la mejor forma de pronunciar cada verbo en la web, así que tarde o temprano la web tendrá el servicio en marcha.'
     },
     pt: {
       'hero.title': 'CapybaraEnglish',
@@ -107,14 +111,15 @@ export class TranslationService {
       'question5': 'O Capybara English é gratuito?',
       'question6': 'Quantos verbos existem neste site?',
       'question7': 'Quando vocês vão incluir os phrasal verbs?',
+      'question8': 'E quanto aos sons IPA?',
       'answer1': 'O processo de aprendizado varia de acordo com cada indivíduo, mas com a prática consistente usando nossa plataforma, a maioria dos alunos percebe uma melhora significativa dentro de 2 a 3 meses.',
       'answer2': 'Sim! Nosso sistema alimentado por IA cria um caminho de aprendizagem personalizado com base em seu nível atual, metas e estilo de aprendizagem.',
       'answer3': 'Com certeza! Nossa plataforma é totalmente responsiva e funciona perfeitamente em smartphones, tablets e computadores desktop.',
       'answer4': 'Sim, temos uma equipe de professores de inglês nativos certificados disponíveis para sessões de prática ao vivo e orientação de pronúncia.',
       'answer5': 'No momento, este site é totalmente gratuito, você pode usá-lo, mas os recursos serão limitados, pois todos os processos (hospedagem, DNS, dados em nuvem) que ajudam esta página a funcionar corretamente são caros, portanto, ele pode funcionar ou não. Portanto, se você gostar deste projeto e quiser nos apoiar, pode nos comprar um café, pois esse apoio será usado para ajudar este projeto a crescer.',
       'answer6': 'No momento, temos cerca de 366 verbos, incluindo verbos regulares e irregulares, mas estamos trabalhando duro para incluir mais verbos.',
-      'answer7': 'Estamos trabalhando nisso, portanto, o tempo é essencial para colocá-los no site.'
-
+      'answer7': 'Estamos trabalhando nisso, portanto, o tempo é essencial para colocá-los no site.',
+      'answer8': 'No momento, estamos trabalhando arduamente para implementar os sons do IPA para que os usuários possam ouvir a melhor maneira de pronunciar cada verbo no site, portanto, mais cedo ou mais tarde, o site terá o serviço em funcionamento.'
     }
   };
 

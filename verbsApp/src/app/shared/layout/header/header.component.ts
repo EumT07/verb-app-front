@@ -12,10 +12,10 @@ import { DarkModeLocalstorageService } from '../../services/dark-mode-localstora
 })
 export class HeaderComponent {
   links: Links[] = [
-    {name: "Home",route: '#home'},
-    {name: "About",route: '#about'},
-    {name: "Team",route: '#team'},
-    {name: "FAQs",route: '#faqs'},
+    {name: "Home",route: '/'},
+    // {name: "About",route: '#about'},
+    // {name: "Team",route: '#team'},
+    // {name: "FAQs",route: '#faqs'},
     {name: "Verbs",route: '/verbs'},
   ]
 
@@ -42,6 +42,7 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    
   }
 
   // checkDarkLocalStorage() {

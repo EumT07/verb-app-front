@@ -45,6 +45,11 @@ export class FaqsComponent {
       question: 'question7',
       answer: 'answer7',
       isOpen: false
+    },
+    {
+      question: 'question8',
+      answer: 'answer8',
+      isOpen: false
     }
   ];
 

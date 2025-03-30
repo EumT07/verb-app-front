@@ -1,5 +1,5 @@
 .verb_not_found_container{
-    width: 400px;
+    width: 350px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 .verb_not_found_container > div {
-    width: 150px;
+    width: 140px;
     height: 300px;
 }
 .verb_not_found_container > div > img{

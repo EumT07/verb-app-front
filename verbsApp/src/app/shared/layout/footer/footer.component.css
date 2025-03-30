@@ -1,26 +1,26 @@
   /* Estructura principal */
 .footer {
   background-color: var(--footer-bg);
-  padding: var(--footer-spacing) 0 0;
+  padding: 1rem 0 0;
   width: 100%;
   height: fit-content;
 }
 
 .footer-container {
-  max-width: var(--footer-max-width);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  gap: var(--footer-spacing);
+  gap: 1rem;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--footer-section-gap);
+  gap: 1.5rem;
   width: 100%;
-  padding-bottom: var(--footer-spacing);
+  padding-bottom: 1rem;
 }
 
 /* Secciones del footer */
@@ -85,6 +85,10 @@
   gap: 0.75rem;
   max-width: 300px;
 }
+.contact-item a {
+  color: #fff;
+  text-decoration: none;
+}
 
 .contact-icon {
   width: 40px;
@@ -115,7 +119,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--footer-txt-color);
+  color: var(--footer-text);
   padding: 0.25rem;
 }
 
