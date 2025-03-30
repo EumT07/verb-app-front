@@ -1,5 +1,5 @@
   .bugs {
-    width: 100vw; 
+    max-width: 100vw; 
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -51,12 +51,12 @@
     align-items: center;
   }
   .bugs-image img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     border-radius: 1rem;
   }
   .buttons {
-    max-width: 60%;
+    width: 250px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -228,11 +228,8 @@
       font-size: 2.5rem;
     }
     .bugs-image{
-      width: 80%;
+      width: 55%;
       max-width: none;
-    }
-    .buttons{
-      width: 80%;
     }
   }
 

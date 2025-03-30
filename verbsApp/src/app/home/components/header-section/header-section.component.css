@@ -1,8 +1,7 @@
-.hero {
+/* .hero {
     min-height: calc(100vh - var(--header-height));
     display: flex;
     align-items: center;
-    /* padding-top: var(--header-height); */
     padding: 5rem 0;
     max-width: 100%;
     margin-top: 100px;
@@ -57,12 +56,97 @@
   .hero-image img {
     width: 100%;
     border-radius: 1rem;
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  } */
+
+  .hero-section {
+    background-color: var(--hero-bg);
+    color: var(--hero-text-color);
+    padding: var(--hero-spacing) 0;
+    min-height: var(--hero-min-height);
+    display: flex;
+    align-items: center;
+    margin-top: var(--header-height);
   }
-  .slide-in-right {
-    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  
+  .hero-container {
+    width: 100%;
+    max-width: var(--hero-max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
   }
+  
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+  }
+  
+  /* Contenido de texto */
+  .hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    color: var(--hero-primary);
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 35ch;
+  }
+  
+  /* Botón */
+  .hero-button {
+    display: inline-flex;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    background-color: var(--hero-primary);
+    color: white;
+    border-radius: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 
+      transform 0.3s ease,
+      background-color 0.3s ease;
+    will-change: transform;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hero-button:hover,
+  .hero-button:focus {
+    transform: translateY(-2px);
+    background-color: color-mix(in srgb, var(--hero-primary), black 15%);
+  }
+  
+  /* Imagen */
+  .hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image {
+    width: min(100%, 500px);
+    height: auto;
+    border-radius: 1rem;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+  
   .slide-in-left {
     -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -73,31 +157,6 @@
             animation: jello-horizontal 0.9s both;
             animation-delay: 1.2s;
   }
-
-@-webkit-keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
 
 @-webkit-keyframes slide-in-left {
   0% {
@@ -182,23 +241,33 @@
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
   }
+}/* Animaciones */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
-@media (max-width: 960px) {
+  
+  /* Responsive */
+  @media (max-width: 868px) {
     .hero-content {
       grid-template-columns: 1fr;
-      text-align: center;
     }
-
-    .hero-text h1 {
-      font-size: 2.5rem;
-    }
-    .hero-image img {
-      width: 60%;
-    }
-
-    .hero-image {
+    
+    .hero-image-wrapper {
       order: -1;
     }
+    
+    .hero-text-content {
+      align-items: center;
+    }
+    
+    .hero-subtitle {
+      max-width: 100%;
+    }
   }
-  

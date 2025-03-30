@@ -1,26 +1,41 @@
-<section id="team" class="team">
-    <div class=" scroll_movement">
-      <h2>{{ translate('team.title') }}</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <div class="member-image-container">
+  <section id="team" class="team-section" aria-labelledby="team-title">
+    <div class="team-container">
+      <h2 id="team-title" class="team-title">{{ translate('team.title') }}</h2>
+      <div class="team-members">
+        <article class="team-card">
+          <div class="team-card__image-wrapper">
             <img 
               src="/images/eublan.jpg" 
-              alt="Team member"
+              alt="{{ translate('team.creator') }}"
+              class="team-card__image"
+              width="300"
+              height="300"
               loading="lazy"
-            >
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/eublan-mata/" target="_blank" rel="noopener noreferrer">
-                <i class="fab linkedin"></i>
+              decoding="async">
+            
+            <div class="team-card__social">
+              <a href="https://www.linkedin.com/in/eublan-mata/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 aria-label="LinkedIn profile"
+                 class="social-link">
+                <i class="fab fa-linkedin social-icon"></i>
               </a>
-              <a href="https://github.com/EumT07" target="_blank" rel="noopener noreferrer">
-                <i class="fab github"></i>
+              <a href="https://github.com/EumT07" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 aria-label="GitHub profile"
+                 class="social-link">
+                <i class="fab fa-github social-icon"></i>
               </a>
             </div>
           </div>
-          <h3>{{ translate('team.creator') }}</h3>
-          <p>{{ translate('team.role') }}</p>
-        </div>
+          
+          <div class="team-card__info">
+            <h3 class="team-card__name">{{ translate('team.creator') }}</h3>
+            <p class="team-card__role">{{ translate('team.role') }}</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>

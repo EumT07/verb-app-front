@@ -1,175 +1,212 @@
-
+  /* Estructura principal */
 .footer {
-    /* background-color: var(--secondary-bg); */
-    background-color: var(--bg-footer);
-    padding-top: 2rem;
-    /* margin-top: 4rem; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: auto;
-  }
+  background-color: var(--footer-bg);
+  padding: var(--footer-spacing) 0 0;
+  width: 100%;
+  height: fit-content;
+}
 
-  .footer-content {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.footer-container {
+  max-width: var(--footer-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--footer-spacing);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--footer-section-gap);
+  width: 100%;
+  padding-bottom: var(--footer-spacing);
+}
+
+/* Secciones del footer */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.footer-brand {
+  gap: 0.75rem;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 80px;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-section h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-slogan,
+.footer-section p {
+  color: var(--footer-text);
+  line-height: 1.5;
+}
+
+/* Listas de contacto y enlaces */
+.contact-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.contact-item,
+.link-item {
+  margin-bottom: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.75rem;
+  max-width: 300px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(73, 70, 70, 0.62);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-icon:hover {
+  background-color: rgba(83, 80, 80, 0.62);
+}
+
+.contact-icon i {
+  color: var(--footer-text);
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--footer-txt-color);
+  padding: 0.25rem;
+}
+
+.footer-link {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--footer-primary);
+}
+
+/* Botón de donación */
+.footer-donation {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.donation-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 250px;
+  height: 55px;
+  padding: 0 1.5rem;
+  border-radius: 40px;
+  background-color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donation-icon {
+  width: 35px;
+  height: 40px;
+}
+
+.donation-icon img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.donation-text {
+  color: #553c06;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Divisor y copyright */
+.footer-divider {
+  height: 1px;
+  background-color: var(--footer-text);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-copyright p {
+  color: var(--footer-text);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 868px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
     gap: 2rem;
-    padding-bottom: 3rem; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
   }
-  .footer-content > div{
-    align-self: baseline;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  
+  .footer-section {
+    padding: 0;
   }
-  .logo{
-    width: 60px;
-    height: 80px;
+  
+  .contact-item {
+    max-width: 100%;
   }
-  .logo img{
-    width: 100%;
-    height: 100%;
-  }
-  .footer-section h3, .footer-section h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
-  .footer-section p{
-    color: var(--text-color-footer);
-  }
-  .footer-section ul {
-    list-style: none;
-  }
-
-  .footer-section ul li {
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-section a {
-    color: var(--text-color-footer);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .footer-section a:hover {
-    color: var(--primary-color);
-  }
-  .contact > ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contact > ul > li {
-    width: 280px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.contact > ul > li > div{
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #4946469f;
-    border-radius: 50%;
-}
-.contact > ul > li > div:hover{
-    background-color: #5350509f;
-}
-.contact > ul > li > p{
-    margin-left: 10px;
-    text-align: center;
 }
 
-.location::before{
-    content: "\f3c5";
-    color: var(--text-color-footer);
-}
-.paper_plane::before {
-    content: "\f1d8";
-    color: var(--text-color-footer);
-
-}
-.phone::before {
-    content: "\f095";
-    color: var(--text-color-footer);
-
-}
-
-  .footer-bottom {
-    padding: 1.5rem 0;
-    text-align: center;
+@media (min-width: 869px) and (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  hr{
-    color: var(--text-color-footer);
-    border: 1px solid var(--text-color-footer);
-    width: 90%;
-  }
-  .footer-bottom p{
-    color: var(--text-color-footer);
-  }
-  .links_follow{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .buymecoffee {
-    display: flex;
-    width: 190px;
-    height: 55px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-    background-color: #fff;
-    cursor: pointer;
-    text-decoration: none;
 }
-
-.coffeeLogo_container {
-    width: 35px;
-    height: 40px;
-    padding: px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.buymecoffee .coffeeLogo_container img{
-    width: 90%;
-    height: 90%;
-}
-.buymecoffee p {
-    color: #553c06;
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-  @media (max-width: 800px) {
-    .footer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    .footer-content {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .contact > ul > li{
-        justify-content: center;
-    }
-  }

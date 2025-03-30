@@ -1,9 +1,29 @@
-<section class="error">
-    <img src="/images/errors/fire.png" alt="error404">
-    <p> <span class="four_1">5</span> <span class="cero">0</span>  <span class="four_2">5</span></p>
-    <h1> <span>Oops!</span> Something went wrong with this page..!!</h1>
-    <h3>We have sent an email to our team in order to resolve this issue as soon as possible</h3>
-    <!-- <p>If the error persists, contact us by <a href="mailto:verbsappsupport@gmail.com"></a></p> -->
-    <h5>Error: bad request</h5>
-    <a [routerLink]="['/']">Back Home</a>
-</section>
+<section class="error-page" aria-labelledby="error-title">
+    <div class="error-container">
+      <img src="/images/errors/fire.png" 
+           alt="" 
+           class="error-image"
+           width="120" 
+           height="120"
+           loading="lazy"
+           aria-hidden="true">
+      
+      <div class="error-code" aria-hidden="true">
+        <span class="digit digit-5">5</span>
+        <span class="digit digit-0">0</span>
+        <span class="digit digit-5">5</span>
+      </div>
+      
+      <div class="error-content">
+        <h1 id="error-title" class="error-title">
+          <span class="highlight">Oops!</span> Something went wrong with this page..!!
+        </h1>
+        <h3>We have sent an email to our team in order to resolve this issue as soon as possible</h3>
+        <p class="error-description">Error: bad request</p>
+      </div>
+      
+      <a [routerLink]="['/']" class="error-button">
+        Back to a Safe Place
+      </a>
+    </div>
+  </section>

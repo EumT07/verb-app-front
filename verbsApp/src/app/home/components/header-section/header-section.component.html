@@ -1,15 +1,22 @@
-<section id="home" class="hero section">
-    <div class="container hero-content scroll_movement">
-      <div class="hero-text slide-in-left">
-        <h1>{{ translate('hero.title')}}</h1>
-        <p>{{translate('hero.subtitle')}}</p>
-        <button [routerLink]="['/verbs']" class="cta-button jello-horizontal">{{translate('hero.cta')}}</button>
+<section id="home" class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-text-content slide-in-left">
+        <h1 id="hero-title" class="hero-title">{{ translate('hero.title')}}</h1>
+        <p class="hero-subtitle">{{translate('hero.subtitle')}}</p>
+        <a [routerLink]="['/verbs']" class="hero-button jello-horizontal">
+          {{translate('hero.cta')}}
+        </a>
       </div>
-      <div class="hero-image">
-        <img class="slide-in-right" 
-        src="/images/CapybaraEnglish1.png" 
+      <div class="hero-image-wrapper">
+        <img src="/images/CapybaraEnglish1.png" 
              alt="Students learning English"
-             loading="lazy">
+             class="hero-image"
+             width="600"
+             height="600"
+             loading="lazy"
+             decoding="async">
       </div>
     </div>
-  </section>
+  </div>
+</section>

@@ -1,58 +1,76 @@
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>Capybara English</h4>
-            <p>{{ translate('footer.slogan') }}</p>
-            <div class="logo">            
-                <img src="/images/CapybaraEnglish4.png" alt="CapybaraEnglish">
-    
-            </div>
-        </div>
-        <div class="footer-section contact">
-            <h4>{{ translate('footer.contact') }}</h4>
-            <ul>
-                <li>
-                    <div>
-                        <i class="fa location"></i>
-                    </div>
-                    <p>{{address}}</p>
-                </li>
-                <li>
-                    <div>
-                        <i class="fa paper_plane"></i>
-                    </div>
-                    <p  id="clipboard"> {{email}}<i class="far fa-copy"></i></p>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-section">
-        <h4>{{ translate('footer.quickLinks') }}</h4>
-        <ul>
-            @for ( route of links; track route.name) {
-                <li>
-                    <a href="{{route.route}}">{{route.name}}</a>
-                </li>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Sección Logo y Slogan -->
+        <section class="footer-section footer-brand" aria-labelledby="footer-brand-heading">
+          <h4 id="footer-brand-heading">Capybara English</h4>
+          <p class="footer-slogan">{{ translate('footer.slogan') }}</p>
+          <div class="footer-logo">
+            <a href="/#home">
+              <img src="/images/CapybaraEnglish4.png" alt="CapybaraEnglish" width="60" height="80" loading="lazy">
+            </a>
+          </div>
+        </section>
+  
+        <!-- Sección Contacto -->
+        <section class="footer-section footer-contact" aria-labelledby="footer-contact-heading">
+          <h4 id="footer-contact-heading">{{ translate('footer.contact') }}</h4>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p class="contact-info">{{address}}</p>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <i class="fas fa-paper-plane"></i>
+              </div>
+              <p class="contact-info" id="clipboard">
+                {{email}}
+                <button class="copy-button" aria-label="Copy email">
+                  <i class="far fa-copy"></i>
+                </button>
+              </p>
+            </li>
+          </ul>
+        </section>
+  
+        <!-- Sección Enlaces Rápidos -->
+        <section class="footer-section footer-links" aria-labelledby="footer-links-heading">
+          <h4 id="footer-links-heading">{{ translate('footer.quickLinks') }}</h4>
+          <ul class="links-list">
+            @for (route of links; track route.name) {
+              <li class="link-item">
+                <a href="{{route.route}}" class="footer-link">{{route.name}}</a>
+              </li>
             }
-        </ul>
-        </div>
-        <div class="footer-section languages">
-            <h3>Languages</h3>
-            <app-language-selector/>
-        </div>
-        
-    </div>
-    <div class="links_follow">
-        <a [routerLink]="['/']" class="buymecoffee">
-        <div class="coffeeLogo_container">
-            <img src="/images/coffee.png" alt="">
-        </div>
-        <p>Buy me a Coffee</p>
+          </ul>
+        </section>
+  
+        <!-- Selector de Idioma -->
+        <section class="footer-section footer-languages" aria-labelledby="footer-lang-heading">
+          <h4 id="footer-lang-heading">Languages</h4>
+          <app-language-selector class="language-selector"/>
+        </section>
+      </div>
+  
+      <!-- Botón Buy Me a Coffee -->
+      <div class="footer-donation">
+        <a href="/" class="donation-button" aria-label="Support us by buying a coffee">
+          <div class="donation-icon">
+            <img src="/images/coffee.png" alt="" width="35" height="40" loading="lazy">
+          </div>
+          <span class="donation-text">Buy me a Coffee</span>
         </a>
-    </div>
-    <hr>
-    <div class="footer-bottom">
-        <div class="container">
-            <p>&copy; 2024 VerbsApp. {{ translate('footer.rights') }}</p>
+      </div>
+  
+      <!-- Línea divisoria -->
+      <div class="footer-divider" role="separator"></div>
+  
+      <!-- Copyright -->
+      <div class="footer-copyright">
+        <p>&copy; 2024 VerbsApp. {{ translate('footer.rights') }}</p>
       </div>
     </div>
   </footer>

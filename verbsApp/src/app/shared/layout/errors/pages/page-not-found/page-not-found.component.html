@@ -1,8 +1,28 @@
-<section class="error">
-    <!-- <img src="bear.png" alt="error404"> -->
-    <img src="/images/errors/ghost.png" alt="error404">
-    <p> <span class="four_1">4</span> <span class="cero">0</span>  <span class="four_2">4</span></p>
-    <h1> <span>Oops!</span> We couldn't Find this page..!!</h1>
-    <h5>Error: bad request</h5>
-    <a [routerLink]="['/']">Back to a Save Place.!!</a>
-</section>
+<section class="error-page" aria-labelledby="error-title">
+    <div class="error-container">
+      <img src="/images/errors/ghost.png" 
+           alt="" 
+           class="error-image"
+           width="120" 
+           height="120"
+           loading="lazy"
+           aria-hidden="true">
+      
+      <div class="error-code" aria-hidden="true">
+        <span class="digit digit-4">4</span>
+        <span class="digit digit-0">0</span>
+        <span class="digit digit-4">4</span>
+      </div>
+      
+      <div class="error-content">
+        <h1 id="error-title" class="error-title">
+          <span class="highlight">Oops!</span> We couldn't find this page
+        </h1>
+        <p class="error-description">Error: bad request</p>
+      </div>
+      
+      <a [routerLink]="['/']" class="error-button">
+        Back to a Safe Place
+      </a>
+    </div>
+  </section>

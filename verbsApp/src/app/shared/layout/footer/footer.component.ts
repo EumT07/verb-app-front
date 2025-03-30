@@ -7,7 +7,7 @@ import { LanguageSelectorComponent } from "../../components/language-selector/la
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink, LanguageSelectorComponent],
+  imports: [LanguageSelectorComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

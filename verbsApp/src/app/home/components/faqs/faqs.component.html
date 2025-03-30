@@ -1,4 +1,4 @@
-<section id="faqs" class="faqs section">
+<!-- <section id="faqs" class="faqs section">
     <div class="container scroll_movement">
       <h2>{{translate('faqs.title')}}</h2>
       <div class="faq-grid">
@@ -12,6 +12,33 @@
                 <p>{{ translate(faq.answer) }}</p>
                 </div>
             </div>
+        }
+      </div>
+    </div>
+  </section> -->
+
+  <section id="faqs" class="faq-section" aria-labelledby="faq-title">
+    <div class="faq-container">
+      <h2 id="faq-title" class="faq-title">{{translate('faqs.title')}}</h2>
+      <div class="faq-list" role="list">
+        @for (faq of faqs; track $index; let i = $index) {
+          <div class="faq-card" role="listitem">
+            <button class="faq-header" 
+                    (click)="toggleFaq(i)" 
+                    [attr.aria-expanded]="faq.isOpen"
+                    >
+              <h3 class="faq-question">{{ translate(faq.question) }}</h3>
+              <span class="faq-icon" aria-hidden="true">{{ faq.isOpen ? '−' : '+' }}</span>
+            </button>
+            <div id="faq-answer-{{i}}" 
+                 class="faq-content" 
+                 [class.active]="faq.isOpen"
+                 role="region">
+              <div class="faq-answer">
+                <p>{{ translate(faq.answer) }}</p>
+              </div>
+            </div>
+          </div>
         }
       </div>
     </div>

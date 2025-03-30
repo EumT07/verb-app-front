@@ -1,4 +1,4 @@
-<section id="about" class="about">
+<!-- <section id="about" class="about">
     <div class="scroll_movement">
       <h2>{{translate('about.title')}}</h2>
       <div class="about-content">
@@ -17,6 +17,33 @@
             <li>{{translate('about.feature4')}}</li>
           </ul>
           <p>{{translate('about.success')}}</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section id="about" class="about-section" aria-labelledby="about-title">
+    <div class="about-container">
+      <h2 id="about-title" class="about-title">{{translate('about.title')}}</h2>
+      <div class="about-grid">
+        <div class="about-media">
+          <img src="/images/CapybaraEnglish1.png" 
+               alt="Our teaching methodology"
+               class="about-image"
+               width="600"
+               height="600"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="about-details">
+          <h3 class="about-subtitle">{{translate('about.subtitle')}}</h3>
+          <p class="about-description">{{translate('about.description')}}</p>
+          <ul class="about-features" role="list">
+            <li class="feature-item">{{translate('about.feature1')}}</li>
+            <li class="feature-item">{{translate('about.feature2')}}</li>
+            <li class="feature-item">{{translate('about.feature3')}}</li>
+            <li class="feature-item">{{translate('about.feature4')}}</li>
+          </ul>
+          <p class="about-success">{{translate('about.success')}}</p>
         </div>
       </div>
     </div>
