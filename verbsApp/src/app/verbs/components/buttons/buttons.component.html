@@ -1,6 +1,22 @@
-<div class="verbs_buttons">
+<!-- <div class="verbs_buttons">
     <a [routerLink]="['/verbs']">All</a>
     <a [routerLink]="['/verbs/regular']">Regular</a>
     <a [routerLink]="['/verbs/irregular']">Irregular</a>
     <a [routerLink]="['/verbs/phrasal-verbs']">Phrasal Verbs</a>
-</div>
+</div> -->
+<nav class="verb-nav">
+    <ul class="verb-nav__list">
+        <li class="verb-nav__item">
+            <a class="verb-nav__link" [routerLink]="['/verbs']">All</a>
+        </li>
+        <li class="verb-nav__item">
+            <a class="verb-nav__link" [routerLink]="['/verbs/regular']">Regular</a>
+        </li>
+        <li class="verb-nav__item">
+            <a class="verb-nav__link" [routerLink]="['/verbs/irregular']">Irregular</a>
+        </li>
+        <li class="verb-nav__item">
+            <a class="verb-nav__link" [routerLink]="['/verbs/phrasal-verbs']">Phrasal Verbs</a>
+        </li>
+    </ul>
+</nav>

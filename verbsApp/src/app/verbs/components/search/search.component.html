@@ -1,7 +1,20 @@
-<div>
+<!-- <div>
     <label for="text">
         <input type="text" placeholder="Search any verb..."
         (keyup)="searchVerb($event)">
         <i class="fa search_ico"></i>
+    </label>
+</div> -->
+<div class="search-container">
+    <label for="search-input" class="search-label">
+        <input 
+            id="search-input"
+            type="text" 
+            placeholder="Search any verb..."
+            class="search-input"
+            (keyup)="searchVerb($event)"
+            aria-label="Search verbs"
+        >
+        <i class="fa fa-search search-icon"></i>
     </label>
 </div>

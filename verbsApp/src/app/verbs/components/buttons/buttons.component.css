@@ -1,4 +1,4 @@
-.verbs_buttons{
+/* .verbs_buttons{
     width: 550px;
     display: flex;
     flex-direction: row;
@@ -8,7 +8,6 @@
 .verbs_buttons > a {
     width: 120px;
     height: 40px;
-    /* background-color: rgb(21, 21, 22); */
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
@@ -37,4 +36,116 @@
         width: 70px;
         font-size: auto;
     }
-} 
+}  */
+
+.verb-nav {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.verb-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+    padding: 0 15px; 
+    margin: 0;
+    list-style: none;
+}
+
+.verb-nav__item {
+    flex: 1 1 auto;
+    min-width: 120px;
+}
+
+.verb-nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px; 
+    padding: 0 20px; 
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px; 
+    text-align: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.verb-nav__link:hover, 
+.verb-nav__link:focus {
+    background-color: var(--primary-dark-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+
+@media screen and (max-width: 768px) {
+    .verb-nav__list {
+        gap: 12px;
+        padding: 0 10px;
+    }
+    
+    .verb-nav__item {
+        min-width: 110px;
+    }
+    
+    .verb-nav__link {
+        height: 42px;
+        padding: 0 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .verb-nav__list {
+        gap: 10px;
+    }
+    
+    .verb-nav__item {
+        min-width: 100px;
+    }
+    
+    .verb-nav__link {
+        height: 40px;
+        padding: 0 14px;
+        font-size: 0.9rem;
+    }
+}
+
+/* @media screen and (max-width: 480px) {
+    .verb-nav {
+        padding: 8px 0;
+    }
+    
+    .verb-nav__list {
+        gap: 8px;
+        padding: 0 8px;
+    }
+    
+    .verb-nav__item {
+        min-width: 85px;
+    }
+    
+    .verb-nav__link {
+        height: 38px;
+        padding: 0 12px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+    }
+} */
+
+@media screen and (max-width: 360px) {
+    .verb-nav__item {
+        min-width: 75px;
+    }
+    
+    .verb-nav__link {
+        height: 36px;
+        padding: 0 10px;
+        font-size: 0.8rem;
+    }
+}

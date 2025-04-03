@@ -1,4 +1,4 @@
-<app-header/>
+<!-- <app-header/>
 <section class="searching">
     <app-search (data)="getVerbsSearched($event)"/>
     <app-buttons class="buttons-container"/>
@@ -30,5 +30,40 @@
             }
         }
         
-</section>
+</section> -->
 
+<div class="verbs-page-container">
+    <app-header/>
+    <section class="search-section">
+        <app-search (data)="getVerbsSearched($event)" />
+        <app-buttons class="buttons-container"/>
+    </section>
+    <section class="verbs-section">
+        @if(verbs.length > 0){
+            <div class="verbs-grid-container">
+                <app-irregular-verb class="verbs-grid" [verbs]="verbs" [verb_loading]="verb_loading"/>
+            </div>
+            @defer () {
+                <app-pagination
+                [totalPages]="totalPages" 
+                [currentPage]="currentPage" 
+                (pageSelected)="pageSelected($event)"
+                (nextPage)="nextPage()"
+                (previousPage)="previousPage()"
+                [limit]="limit"/>
+            } @placeholder (minimum 2s) {
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+            }
+        }@else () {
+            @defer () {
+                <app-verb-not-found class="not-found-container"/>
+            }@placeholder (minimum 1s) {
+                <div class="loading-spinner full-height">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+            }
+        }
+    </section>
+</div>

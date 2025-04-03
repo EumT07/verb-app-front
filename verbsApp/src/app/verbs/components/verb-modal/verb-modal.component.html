@@ -1,39 +1,56 @@
-<div class="modal">
-    <div class="modal__content slide-in-right">
-        <div class="modal_info_container">
+
+
+<div class="modal-overlay">
+    <div class="modal-container slide-in-right">
+        <div class="modal-header">
+            <button class="close-button" (click)="closeModal()" aria-label="Close modal">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="modal-content">
             @defer () {
-                <div class="modal_info_content">
-                    <div class="modal_info_title bounce-top">
-                        <h1 >{{verbDetail?.infinitive| uppercase}}</h1>
-                        <h5 >{{verbDetail?.type}}</h5>
+                <div class="verb-info">
+                    <!-- Encabezado del verbo -->
+                    <div class="verb-header">
+                        <h1 class="verb-title">{{verbDetail?.infinitive| uppercase}}</h1>
+                        <span class="verb-type">{{verbDetail?.type}}</span>
                     </div>
-                    <hr>
-                    <h4 class="slide-in-left">Definition:</h4>
-                    <p class="slide-in-left">{{verbDetail?.definition}}</p>
-                    <div class="translate bounce-top">
+                    
+                    <!-- Definición y traducciones -->
+                    <div class="verb-definition">
+                        <h4>Definition:</h4>
+                        <p>{{verbDetail?.definition}}</p>
+                    </div>
+                    
+                    <div class="translations-grid">
+                        <!-- Cada elemento de traducción -->
                         <div>
                             <img class="jello-horizontal" id="GB" src="https://flagsapi.com/ES/shiny/64.png" alt="UK">
-                            <p><span>-</span> {{verbDetail?.Meaning?.spanish | titlecase }}</p>
+                            <p> {{verbDetail?.Meaning?.spanish | titlecase }}</p>
                         </div>
                         <div>
                             <img class="jello-horizontal" id="GB" src="https://flagsapi.com/BR/shiny/64.png" alt="UK">
-                            <p><span>-</span> {{verbDetail?.Meaning?.portuguese | titlecase}}</p>
+                            <p> {{verbDetail?.Meaning?.portuguese | titlecase}}</p>
                         </div>
                         <div>
                             <img class="jello-horizontal" id="GB" src="https://flagsapi.com/IT/shiny/64.png" alt="UK">
-                            <p><span>-</span> {{verbDetail?.Meaning?.italian | titlecase}}</p>
+                            <p> {{verbDetail?.Meaning?.italian | titlecase}}</p>
                         </div>
                         <div>
                             <img class="jello-horizontal" id="GB" src="https://flagsapi.com/FR/shiny/64.png" alt="UK">
-                            <p><span>-</span> {{verbDetail?.Meaning?.french | titlecase}}</p>
+                            <p> {{verbDetail?.Meaning?.french | titlecase}}</p>
                         </div>
                         <div>
                             <img class="jello-horizontal" id="GB" src="https://flagsapi.com/DE/shiny/64.png" alt="UK">
-                            <p><span>-</span> {{verbDetail?.Meaning?.german | titlecase}}</p>
+                            <p>{{verbDetail?.Meaning?.german | titlecase}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="tense_content">
+                
+                <!-- Tiempos verbales -->
+                <div class="verb-tenses">
+                    <!-- Contenido de tiempos verbales -->
                     <div class="tense_content_title">
                         <h3>Verbs Tense</h3>
                         <div class="info_verb_tense" (click)="showDiv()"><span>i</span></div>
@@ -355,23 +372,14 @@
                             </div>
                         </div>
                     }
-                    
-                    
                 </div>
-            }@placeholder (minimum 10s) {
+                
+            } @placeholder (minimum 12s) {
                 <div class="loading_icon_modal">
-                    <p>Wait few secons while all info get ready</p>
+                    <p>Loading verb information...</p>
                     <i class="fas fa-spinner fa-spin"></i>
                 </div>
             }
         </div>
-        <div class="close_icon_container" (click)="closeModal()">
-            <i class="fa close_icon"></i>
-        </div>
     </div>
 </div>
-
-
-<!-- 
-<p><img id="ES" src="https://flagsapi.com/ES/shiny/64.png" alt="SPAIN"> | {{verbDetail?.meaning}} </p>
-            <p><img id="BRA" src="https://flagsapi.com/BR/shiny/64.png" alt="SPAIN"> | {{verbDetail?.meaning}} </p> -->

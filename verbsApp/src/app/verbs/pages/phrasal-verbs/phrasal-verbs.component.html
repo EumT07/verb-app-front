@@ -1,36 +1,36 @@
-<app-header/>
-<section class="searching">
-    <app-search/>
-    <app-buttons class="buttons-container"/>
-</section>
-
-<section class="verbs">
-    <!-- <app-verb class="app_container" [verbs]="verbs" [verb_loading]="verb_loading" />
-    <app-pagination/> -->
-    @if(verbs.length > 0){
-        <app-verb class="app_container" [verbs]="verbs" [verb_loading]="verb_loading" />
-        @defer () {
-            <!-- <app-pagination
-            [totalPages]="totalPages" 
-            [currentPage]="currentPage" 
-            (pageSelected)="pageSelected($event)"
-            (nextPage)="nextPage()"
-            (previousPage)="previousPage()"
-            [limit]="limit"/> -->
-            <app-pagination/>
-        } @placeholder (minimum 3s)  {
-            <div class="loading_icon">
-                <i class="fas fa-spinner fa-spin"></i>
+<div class="verbs-page-container">
+    <app-header/>
+    <section class="search-section">
+        <!-- <app-search (data)="getVerbsSearched($event)" /> -->
+        <app-buttons class="buttons-container"/>
+    </section>
+    <section class="verbs-section">
+        @if(verbs.length > 0){
+            <div class="verbs-grid-container">
+                <app-verb class="verbs-grid" [verbs]="verbs" [verb_loading]="verb_loading" />
             </div>
+            @defer () {
+                <!-- <app-pagination
+                [totalPages]="totalPages" 
+                [currentPage]="currentPage" 
+                (pageSelected)="pageSelected($event)"
+                (nextPage)="nextPage()"
+                (previousPage)="previousPage()"
+                [limit]="limit"/> -->
+            } @placeholder (minimum 2s) {
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+            }
+        }@else () {
+            @defer () {
+                <app-verb-not-found class="not-found-container"/>
+            }@placeholder (minimum 1s) {
+                <div class="loading-spinner full-height">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+            }
         }
-    }@else () {
-        @defer () {
-            <app-verb-not-found class="app-verb-not-found-container"/>
-        }@placeholder (minimum 1s) {
-            <div class="loading_icon verb-loading-not-found">
-                <i class="fas fa-spinner fa-spin"></i>
-            </div>
-        }
-    }
-</section>
+    </section>
+</div>
 
