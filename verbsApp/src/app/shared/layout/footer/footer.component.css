@@ -1,6 +1,6 @@
   /* Estructura principal */
 .footer {
-  background-color: var(--footer-bg);
+  background-color: var(--bg-footer);
   padding: 1rem 0 0;
   width: 100%;
   height: fit-content;
@@ -48,14 +48,14 @@
 }
 
 .footer-section h4 {
-  color: var(--primary-color);
+  color: var(--text-footer);
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
 .footer-slogan,
 .footer-section p {
-  color: var(--footer-text);
+  color: #fff;
   line-height: 1.5;
 }
 
@@ -96,13 +96,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(73, 70, 70, 0.62);
+  background-color: rgba(148, 143, 143, 0.62);
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
 
 .contact-icon:hover {
-  background-color: rgba(83, 80, 80, 0.62);
+  background-color: #553c06;
 }
 
 .contact-icon i {
@@ -130,7 +130,7 @@
 }
 
 .footer-link:hover {
-  color: var(--footer-primary);
+  color: #D1C6AA;
 }
 
 /* Botón de donación */

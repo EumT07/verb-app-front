@@ -4,19 +4,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #4f46e5;
-    --text-color: #1f2937;
+    /*New colors*/
+    --text-title: #4c4950;
+    --text-color-p: #1f2937;
+    --bg-buttons: #91582C;
+    --hover-color: #8f5e38;
+    --bg-sections-1: #FFFFFF;
+    --bg-sections-2: #f8f6f0;
+    --icon-color: #744F32;
+    --bg-footer: #3D2D24;
+    --text-footer: #D1C6AA;
+    --bg-verbs-cards: #FFEFD9;
+    --txt-ipa-verb-card: #cf971c;
+
+    
+    --primary-color: #91582C;
     --bg-color: #ffffff;
+    --text-color: #1f2937;
     --secondary-bg: #f3f4f6;
     --header-height: 4rem;
-    --border-box: #a19d9d;
-    --border-box-shadow: #646262;
+    --border-box: #918e8e;
+    --border-box-shadow: #535252;
     /*Footer*/
     --footer-text: #fff;
-    --footer-bg: #2c2c2c;
-    --bg-verb-card: #1b263d;
-    --txt-verb-card: #fff;
-    --txt-ipa-verb-card: #ecc060;
+    --footer-bg: #60493b;
+    --bg-verb-card: #b77a49;
+    --txt-verb-card: #331614;
+    --txt-ipa-verb-card: #b88821;
     --transition-speed: 0.3s;
     --transparent-bg: transparent;
     --inherit-text: inherit;
@@ -26,22 +40,17 @@
     --hero-max-width: 1200px;
     --hero-min-height: calc(100vh - var(--header-height));
     /*About*/
-    --about-bg: var(--secondary-bg);
+    --about-bg: #FFFCF5;
     --about-text: var(--text-color);
     --about-gap: clamp(2rem, 4vw, 4rem);
     /*FAQs*/
-    --faq-bg: var(--secondary-bg);
-    --faq-text: inherit;
-    --faq-primary: var(--primary-color);
-    --faq-border: var(--border-box);
-    --faq-shadow: var(--border-box-shadow);
     --faq-spacing: 2rem;
     --faq-max-width: 800px;
     --faq-radius: 1rem;
     --faq-transition: all 0.3s ease-out;
     /*Teams*/
-    --team-bg: var(--bg-color);
-    --team-social-bg: rgba(0, 0, 0, 0.7);
+    /* --team-bg: var(--bg-color); */
+    --team-social-bg: rgba(29, 28, 28, 0.7);
     --team-transition: all 0.3s ease;
     --modal-width: 600px;
     --modal-padding: 20px;
@@ -394,20 +403,25 @@ body {
 }
 
 /* Verbs */
+app-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .verbs-page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     position: relative;
+    background-color: var(--bg-sections-2);
 }
 
 .search-section {
     position: sticky;
     top: 64px; 
-    background-color: var(--bg-color);
+    background-color: var(--bg-sections-2);
     z-index: 20;
     padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .buttons-container {
@@ -420,7 +434,8 @@ body {
 .verbs-section {
     flex: 1;
     padding: 20px 15px 40px;
-    margin-top: 100px;
+    margin-top: 70px;
+    background-color: var(--bg-sections-2);
 }
 
 .verbs-grid-container {
@@ -456,8 +471,8 @@ body {
 /* Cards */
 .verb_container, .loading_verbs {
     width: 100%;
-    aspect-ratio: 4/3; /* Mantener proporción */
-    background-color: var(--bg-verb-card);
+    aspect-ratio: 4/3;
+    background-color: var(--bg-verbs-cards);
     border: 1px solid var(--border-color);
     border-radius: 20px;
     display: flex;
@@ -467,16 +482,17 @@ body {
     padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 1.4px solid #58524b;
 }
 
 .verb_container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 15px 8px rgba(8, 8, 8, 0.1);
 }
 
 .verb_container > h3{
     font-size: 1.3rem;
-    color: var(--txt-verb-card);
+    color: #27252a;
 }
 .verb_container .ipa {
     font-size: 1.2rem;
@@ -484,6 +500,7 @@ body {
 }
 .verb_container hr{
     width: 70%;
+    border: 1px solid #636161;
 }
 .verb_container > p{
     color: #fff;
@@ -536,7 +553,7 @@ body {
 .loading_info {
     width: 70%;
     height: 12px;
-    background-color: #d8d0d0;
+    background-color: #69676b;
     border-radius: 20px;
     
 }
@@ -750,6 +767,7 @@ body {
         font-size: 1rem;
     }
     .verbs-section {
+        margin-top: 50px;
         padding: 20px 2px 10px; /* Espacio extra para menús desplegables en móviles */
     }
 }

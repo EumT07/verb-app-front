@@ -1,5 +1,5 @@
 .about-section {
-  background-color: var(--secondary-bg);
+  background-color: var(--bg-sections-2);
   padding: 2rem 0;
   width: 100%;
 }
@@ -14,7 +14,7 @@
 .about-title {
   text-align: center;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
-  color: var(--primary-color);
+  color: var(--text-title);
   margin-bottom: 2rem;
   line-height: 1.2;
 }
@@ -48,7 +48,7 @@
 
 .about-subtitle {
   font-size: clamp(1.4rem, 3vw, 1.8rem);
-  color: var(--about-text);
+  color: var(--text-color-p);
   margin: 0;
   line-height: 1.3;
 }
@@ -75,7 +75,7 @@
 
 .feature-item::before {
   content: "•";
-  color: var(--primary-color);
+  color: var(--icon-color);
   font-size: 1.5rem;
   position: absolute;
   left: 0;

@@ -33,7 +33,7 @@
   .hero-title {
     font-size: clamp(2.25rem, 5vw, 3.5rem);
     line-height: 1.2;
-    color: var(--primary-color);
+    color: var(--text-title);
     margin: 0;
     font-weight: 700;
   }
@@ -43,12 +43,13 @@
     line-height: 1.6;
     margin: 0;
     max-width: 35ch;
+    color: var(--text-title);
   }
   
   .hero-button {
     display: inline-flex;
     padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
-    background-color: var(--primary-color);
+    background-color: var(--bg-buttons);
     color: white;
     border-radius: 0.5rem;
     font-size: clamp(1rem, 2vw, 1.1rem);
@@ -62,8 +63,7 @@
     cursor: pointer;
   }
   
-  .hero-button:hover,
-  .hero-button:focus {
+  .hero-button:hover {
     transform: translateY(-2px);
     background-color: color-mix(in srgb, var(--primary-color), black 15%);
   }
