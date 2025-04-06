@@ -1,27 +1,50 @@
-# VerbsApp
+# Capybara English (Currently working on this project)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+It is an interactive MVP web application that allows users to practice, learn, improve the pronunciation (I'm still learning how to do it) of English verbs in order to increase their vocabulary and improve their learning.
 
-## Development server
+### Home
+<p align="center">
+  <img src="https://github.com/EumT07/Capybara-English/blob/master/Capybara%20files/CapybaraEnglish/Home.png" width="650" height="400"  alt="home" />
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Verbs
+<p align="center">
+  <img src="https://github.com/EumT07/Capybara-English/blob/master/Capybara%20files/CapybaraEnglish/Verbs.png" width="650" height="400"  alt="home" />
+</p>
 
-## Code scaffolding
+## Technology Stack
+  * Angular 18
+  * Typescript
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project setup
+### Prerequisites
+* Node.js(v18 or higher)
+* npm or yarn
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository:
 
-## Running unit tests
+```bash
+https://github.com/EumT07/verb-app-front.git
+cd verb-app-front/verbsApp
+```
+2. Install dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install
+```
 
-## Running end-to-end tests
+## Compile and run the project
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+# development
+$ ng serve
+```
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## License
